@@ -742,11 +742,11 @@
           </div>
 
           <div class="mt-8 space-y-3 font-mono text-sm">
-            <a href="mailto:osmanfurknerkan@gmail.com" class="flex items-center gap-3 hover:text-accent transition-colors">
+            <a id="contactMail" href="#" class="flex items-center gap-3 hover:text-accent transition-colors">
               <span class="h-9 w-9 grid place-items-center rounded-lg border border-slate-300 dark:border-slate-700">
                 <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
               </span>
-              osmanfurknerkan@gmail.com
+              <span id="contactMailText">e-posta için tıklayın</span>
             </a>
             <a href="tel:+905014999118" class="flex items-center gap-3 hover:text-accent transition-colors">
               <span class="h-9 w-9 grid place-items-center rounded-lg border border-slate-300 dark:border-slate-700">
@@ -799,7 +799,7 @@
   <div class="rgb-dock fixed bottom-6 left-1/2 -translate-x-1/2 z-50 flex items-center backdrop-blur-md bg-slate-950/90 shadow-2xl rounded-full px-5 py-2.5 text-slate-200">
     <a href="./OsmanFurkanErkan-CV.pdf" target="_blank" rel="noopener noreferrer" download class="js-cv flex items-center gap-2 text-xs font-mono tracking-wider hover:text-cyan-300 transition-colors" data-en="📄 CV_DOWNLOAD">📄 CV_INDIR</a>
     <span class="mx-4 h-4 w-px bg-slate-600/50"></span>
-    <button onclick="navigator.clipboard.writeText('osmanfurknerkan@gmail.com'); var t=this.innerText; this.innerText='KOPYALANDI ✓'; setTimeout(()=>this.innerText=t, 2000)" class="text-xs font-mono tracking-wider hover:text-cyan-300 transition-colors" data-en="✉️ EMAIL">✉️ E-POSTA</button>
+    <button id="dockMail" class="text-xs font-mono tracking-wider hover:text-cyan-300 transition-colors" data-en="✉️ EMAIL">✉️ E-POSTA</button>
     <span class="mx-4 h-4 w-px bg-slate-600/50"></span>
     <button id="dockThemeToggle" class="text-xs font-mono tracking-wider hover:text-cyan-300 transition-colors" data-en="🌓 MODE">🌓 MOD</button>
   </div>
@@ -815,6 +815,29 @@
   <script>
     // Lucide (varsa)
     if (window.lucide && lucide.createIcons) { try { lucide.createIcons(); } catch (e) {} }
+
+    // ---- E-posta gizleme (bot harvest koruması): adres parça parça kurulur ----
+    (function () {
+      var user = 'osmanfurknerkan';
+      var domain = 'gmail' + '.' + 'com';
+      var mail = user + '@' + domain;
+      window.__OFE_MAIL = mail; // FormSubmit fetch'i bunu kullanır
+
+      var a = document.getElementById('contactMail');
+      if (a) a.setAttribute('href', 'mailto:' + mail);
+      var t = document.getElementById('contactMailText');
+      if (t) t.textContent = mail;
+
+      var dm = document.getElementById('dockMail');
+      if (dm) {
+        dm.addEventListener('click', function () {
+          try { navigator.clipboard.writeText(mail); } catch (e) {}
+          var prev = dm.textContent;
+          dm.textContent = 'KOPYALANDI ✓';
+          setTimeout(function () { dm.textContent = prev; }, 2000);
+        });
+      }
+    })();
 
     // ---- Infinite Typewriter (kod yazar gibi değişen alt başlık) ----
     (function () {
@@ -996,7 +1019,7 @@
 
         var isimInput = form.name, mailInput = form.email, mesajInput = form.message;
 
-        fetch("https://formsubmit.co/ajax/c8da8401574d7c03628960a13ba1c1dd", {
+        fetch("https://formsubmit.co/ajax/" + window.__OFE_MAIL, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
           body: JSON.stringify({
