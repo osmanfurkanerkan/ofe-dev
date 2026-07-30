@@ -394,7 +394,7 @@
       </div>
     </section>
 
-    <!-- ================= GELİŞMELER VİTRİNİ (9 SEKME) ================= -->
+    <!-- ================= GELİŞMELER VİTRİNİ (10 SEKME) ================= -->
     <section id="dispatch" class="py-16 border-t border-slate-300 dark:border-slate-800" data-aos="fade-up">
       <p class="font-mono text-xs text-accent tracking-widest mb-3">// 03 — TECH DISPATCH</p>
       <h2 class="font-display text-3xl font-bold mb-8" data-en="Updates">Gelişmeler</h2>
@@ -403,19 +403,19 @@
         <div class="rounded-3xl overflow-hidden grid grid-cols-1 md:grid-cols-2 h-auto md:h-[460px] border backdrop-blur-xl
                     bg-white/70 border-slate-300 dark:bg-white/[0.04] dark:border-slate-800">
           <div class="relative h-72 sm:h-80 md:h-full bg-slate-200 dark:bg-slate-900">
-            <img id="dispImg" src="./sertifika.png" alt="Gelişme görseli"
+            <img id="dispImg" src="./allstar.jpg" alt="Gelişme görseli"
                  onerror="this.src='https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=600&auto=format&fit=crop&q=80'"
                  class="fade-swap absolute inset-0 h-full w-full object-cover object-center" />
           </div>
           <div class="p-7 md:p-9 flex flex-col justify-center">
-            <span id="dispTag" class="fade-swap font-mono text-xs text-accent tracking-wider">2026-06 · SERTİFİKA / EĞİTİM</span>
+            <span id="dispTag" class="fade-swap font-mono text-xs text-accent tracking-wider">2026-07 · HACKATHON / FİNAL</span>
             <h3 id="dispTitle" class="fade-swap font-display text-2xl md:text-3xl font-bold mt-3 leading-snug">
-              Veri Bilimi & Makine Öğrenmesi Kampı
+              Turkcell Code Night All-Star Finali
             </h3>
             <p id="dispDesc" class="fade-swap mt-3 text-slate-600 dark:text-slate-400 leading-relaxed">
-              Atıl Samancıoğlu'nun 61,5 saatlik Veri Bilimi & Makine Öğrenmesi kampını tamamladım.
-              Üstüne bitirme projemi geliştirdim: turbofan motorlarının kalan ömrünü tahmin eden,
-              canlıya alınmış uçtan uca bir ML uygulaması.
+              İzmir etabındaki 2.'lik derecemizin ardından Mehmet Ali Sevdinoğlu ve İskender Guliyev
+              ile birlikte Turkcell Geleceği Yazanlar Code Night All-Star 2026 finalinde yer aldık;
+              kısıtlı sürede gerçek bir iş problemine çözüm ürettiğimiz uykusuz bir vaka maratonuydu.
             </p>
           </div>
         </div>
@@ -1003,10 +1003,11 @@
       apply(saved, true);
     })();
 
-    // ---- Gelişmeler vitrini (9 sekme, sabit yükseklik) ----
+    // ---- Gelişmeler vitrini (10 sekme, sabit yükseklik) ----
     (function () {
       var FALLBACK = 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=600&auto=format&fit=crop&q=80';
       var data = [
+        { img: './allstar.jpg',       tag: '2026-07 · HACKATHON / FİNAL', tag_en: '2026-07 · HACKATHON / FINAL', title: 'Turkcell Code Night All-Star Finali', title_en: 'Turkcell Code Night All-Star Final', desc: "Turkcell Code Night'ın İzmir etabındaki 2.'lik derecemizin ardından, ekip arkadaşlarım Mehmet Ali Sevdinoğlu ve İskender Guliyev ile Turkcell Geleceği Yazanlar Code Night All-Star 2026 finalinde yer aldık. Türkiye'nin farklı şehirlerinde dereceye giren ekiplerin buluştuğu organizasyonda, kısıtlı sürede gerçek bir iş problemine çözüm üretmeye çalıştığımız uykusuz bir vaka maratonunu geride bıraktık; yeni teknik yaklaşımlar denediğimiz ve zaman kısıtı altında takım olarak çalıştığımız bu final, vizyonumuzu genişleten kıymetli bir deneyim oldu.", desc_en: "Following our 2nd place finish at the Turkcell Code Night İzmir stage, I had the opportunity to compete in the Code Night All-Star 2026 final alongside my teammates Mehmet Ali Sevdinoğlu and İskender Guliyev. Competing alongside top teams from across Turkey, trying to solve a real business problem in a limited time and completing a sleepless case marathon was a highly instructive process — a final where we tested new technical approaches and experienced teamwork under time constraints, broadening our vision." },
         { img: './sertifika.png',      tag: '2026-06 · SERTİFİKA / EĞİTİM', tag_en: '2026-06 · CERTIFICATE / COURSE', title: 'Veri Bilimi & Makine Öğrenmesi Kampı', title_en: 'Data Science & ML Bootcamp', desc: "Atıl Samancıoğlu'nun 61,5 saatlik Veri Bilimi & Makine Öğrenmesi kampını tamamladım (Python, istatistik, EDA, feature engineering, denetimli/denetimsiz öğrenme, XGBoost). Üstüne bitirme projemi geliştirdim: NASA C-MAPSS turbofan motorlarının kalan ömrünü tahmin eden, canlıya alınmış uçtan uca bir ML uygulaması.", desc_en: "I completed Atıl Samancıoğlu's 61.5-hour Data Science & Machine Learning bootcamp (Python, statistics, EDA, feature engineering, supervised/unsupervised learning, XGBoost). On top of it I built my capstone: a deployed end-to-end ML app predicting the Remaining Useful Life of NASA C-MAPSS turbofan engines." },
         { img: './roketsan.jpg',       tag: '2026-05 · ZİRVE',             tag_en: '2026-05 · SUMMIT',           title: 'ROKETSAN Gençlik Buluşması',        title_en: 'ROKETSAN Youth Meetup',              desc: "19 Mayıs Atatürk'ü Anma, Gençlik ve Spor Bayramı coşkusunu ROKETSAN ev sahipliğinde düzenlenen zirvede, savunma sanayimizin kalbinde deneyimledim.", desc_en: "I experienced the spirit of the May 19th Commemoration of Atatürk, Youth and Sports Day at a summit hosted by ROKETSAN, in the heart of our defense industry." },
         { img: './aegan.jpg',          tag: '2026-05 · ZİRVE',             tag_en: '2026-05 · SUMMIT',           title: 'Aegean Career Summit',              title_en: 'Aegean Career Summit',               desc: "İzQ Girişimcilik Merkezi'nde düzenlenen zirvede önde gelen profesyonellerin kariyer yolculuklarını dinleyip sektörel içgörüler edindim.", desc_en: "At the summit held at the İzQ Entrepreneurship Center, I listened to the career journeys of leading professionals and gained sectoral insights." },
