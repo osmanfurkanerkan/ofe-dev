@@ -403,21 +403,84 @@
         </div>
       </div>
 
-      <!-- GitHub Canlı Katkı Grafiği & İstatistik Kartı -->
-      <div class="mt-5 rounded-2xl p-6 border backdrop-blur-xl bg-white/70 border-slate-300 dark:bg-white/[0.03] dark:border-slate-800 hover:border-sky-400/40 transition-all" data-aos="fade-up" data-aos-delay="80">
-        <div class="flex flex-wrap items-center justify-between gap-4 mb-4">
-          <div class="flex items-center gap-2.5">
-            <svg class="h-5 w-5 text-accent" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.49 0-.24-.01-.87-.01-1.71-2.78.62-3.37-1.37-3.37-1.37-.45-1.18-1.11-1.49-1.11-1.49-.91-.64.07-.62.07-.62 1 .07 1.53 1.06 1.53 1.06.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.71 0 0 .84-.27 2.75 1.05a9.4 9.4 0 0 1 5 0c1.91-1.32 2.75-1.05 2.75-1.05.55 1.41.2 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.81-4.57 5.06.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .27.18.6.69.49A10.26 10.26 0 0 0 22 12.25C22 6.58 17.52 2 12 2Z"/></svg>
-            <h3 class="font-display text-lg font-bold" data-en="GitHub Live Activity &amp; Commit Matrix">GitHub Canlı Aktivite &amp; Katkı Matrisi</h3>
+      <!-- ================= GITHUB CANLI AKTİVİTE & İSTATİSTİK BENTO ================= -->
+      <div class="mt-5 grid grid-cols-1 lg:grid-cols-3 gap-5" data-aos="fade-up" data-aos-delay="80">
+
+        <!-- Sol: Profil & Aktivite Rozeti (1 Kolon) -->
+        <div class="rounded-2xl p-6 border backdrop-blur-xl bg-white/70 border-slate-300 dark:bg-white/[0.03] dark:border-slate-800 flex flex-col justify-between hover:border-sky-400/40 transition-all">
+          <div>
+            <div class="flex items-center justify-between gap-3 mb-4">
+              <div class="flex items-center gap-2.5">
+                <div class="h-9 w-9 grid place-items-center rounded-xl bg-sky-500/10 text-sky-400 border border-sky-500/20">
+                  <svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.49 0-.24-.01-.87-.01-1.71-2.78.62-3.37-1.37-3.37-1.37-.45-1.18-1.11-1.49-1.11-1.49-.91-.64.07-.62.07-.62 1 .07 1.53 1.06 1.53 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.71 0 0 .84-.27 2.75 1.05a9.4 9.4 0 0 1 5 0c1.91-1.32 2.75-1.05 2.75-1.05.55 1.41.2 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.81-4.57 5.06.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .27.18.6.69.49A10.26 10.26 0 0 0 22 12.25C22 6.58 17.52 2 12 2Z"/></svg>
+                </div>
+                <div>
+                  <h3 class="font-display font-bold text-base">GitHub Ekosistemi</h3>
+                  <p class="font-mono text-[11px] text-accent">@osmanfurkanerkan</p>
+                </div>
+              </div>
+              <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[10px] font-mono bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20">
+                <span class="h-1.5 w-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                <span data-en="Active">Aktif</span>
+              </span>
+            </div>
+
+            <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed mb-4" data-en="Continuous open-source commits across RAG AI, Deep Learning, Java Spring Boot &amp; backend architecture.">
+              Yapay zeka/RAG asistanları, derin öğrenme, Java Spring Boot ve backend mimarileri üzerinde sürekli güncellenen açık kaynak kod deposu.
+            </p>
+
+            <div class="space-y-2 font-mono text-xs">
+              <div class="flex items-center justify-between p-2 rounded-lg bg-white/50 dark:bg-white/[0.02] border border-slate-200 dark:border-white/5">
+                <span class="text-slate-500 dark:text-slate-400" data-en="Public Repos">Açık Kaynak Repolar</span>
+                <span class="font-bold text-sky-400">15+ Repo</span>
+              </div>
+              <div class="flex items-center justify-between p-2 rounded-lg bg-white/50 dark:bg-white/[0.02] border border-slate-200 dark:border-white/5">
+                <span class="text-slate-500 dark:text-slate-400" data-en="Primary Stack">Ana Teknolojiler</span>
+                <span class="font-bold text-accent">Python · Java</span>
+              </div>
+            </div>
           </div>
-          <a href="https://github.com/osmanfurkanerkan" target="_blank" rel="noopener noreferrer" class="font-mono text-xs text-sky-400 hover:text-sky-300 flex items-center gap-1 transition-colors">
-            @osmanfurkanerkan <span class="font-sans font-bold">↗</span>
+
+          <a href="https://github.com/osmanfurkanerkan" target="_blank" rel="noopener noreferrer" class="mt-5 w-full inline-flex items-center justify-center gap-2 rounded-xl border border-sky-500/30 bg-sky-500/10 hover:bg-sky-500/20 px-4 py-2.5 font-mono text-xs font-semibold text-sky-300 transition-all group">
+            <span data-en="Visit GitHub Profile">GitHub Profilini Ziyaret Et</span>
+            <span class="group-hover:translate-x-0.5 transition-transform">↗</span>
           </a>
         </div>
-        <p class="text-sm text-slate-600 dark:text-slate-400 mb-5" data-en="Real-time contribution frequency and repository commits from GitHub profile.">GitHub profilindeki gerçek zamanlı kodlama katkısı ve commit yoğunluğu.</p>
-        <div class="overflow-x-auto p-4 rounded-xl bg-slate-950/70 border border-white/5 flex items-center justify-center">
-          <img src="https://ghchart.rshah.org/38bdf8/osmanfurkanerkan" alt="Osman Furkan Erkan GitHub Katkı Grafiği" class="w-full max-w-3xl filter drop-shadow-[0_0_12px_rgba(56,189,248,0.35)]" decoding="async" />
+
+        <!-- Sağ: Katkı Grafiği & Görsel Matris (2 Kolon) -->
+        <div class="lg:col-span-2 rounded-2xl p-6 border backdrop-blur-xl bg-white/70 border-slate-300 dark:bg-white/[0.03] dark:border-slate-800 flex flex-col justify-between hover:border-sky-400/40 transition-all">
+          <div>
+            <div class="flex flex-wrap items-center justify-between gap-3 mb-3">
+              <div>
+                <h3 class="font-display font-bold text-base" data-en="Commit Frequency &amp; Activity Matrix">Commit Yoğunluğu &amp; Kodlama Matrisi</h3>
+                <p class="text-xs text-slate-500 dark:text-slate-400 mt-0.5" data-en="Live year-long contribution record synced with GitHub API.">GitHub ile senkronize 1 yıllık canlı katkı haritası.</p>
+              </div>
+              <div class="flex items-center gap-1.5 font-mono text-[10px] text-slate-400">
+                <span data-en="Less">Az</span>
+                <span class="h-2.5 w-2.5 rounded-sm bg-slate-300 dark:bg-slate-800"></span>
+                <span class="h-2.5 w-2.5 rounded-sm bg-sky-900"></span>
+                <span class="h-2.5 w-2.5 rounded-sm bg-sky-600"></span>
+                <span class="h-2.5 w-2.5 rounded-sm bg-sky-400"></span>
+                <span class="h-2.5 w-2.5 rounded-sm bg-cyan-300"></span>
+                <span data-en="More">Yoğun</span>
+              </div>
+            </div>
+
+            <!-- Matris Görsel Alanı (Sıkılaştırılmış, Yumuşak Arka Planlı & Uyumlu) -->
+            <div class="mt-4 p-4 rounded-xl border bg-slate-900/90 border-slate-800 dark:bg-[#080B10] dark:border-white/5 flex items-center justify-center overflow-x-auto shadow-inner">
+              <img src="https://ghchart.rshah.org/38bdf8/osmanfurkanerkan" alt="Osman Furkan Erkan GitHub Katkı Grafiği" class="w-full max-w-2xl filter contrast-125 drop-shadow-[0_0_8px_rgba(56,189,248,0.25)] rounded" decoding="async" />
+            </div>
+          </div>
+
+          <div class="mt-4 pt-3 border-t border-slate-200 dark:border-white/5 flex flex-wrap items-center justify-between gap-2 text-[11px] font-mono text-slate-500 dark:text-slate-400">
+            <span class="flex items-center gap-1.5">
+              <span class="h-2 w-2 rounded-full bg-sky-400"></span>
+              <span data-en="Real-time Commit Matrix">Gerçek Zamanlı Commit Matrisi</span>
+            </span>
+            <span data-en="Updated Daily">Her Gün Otomatik Güncellenir</span>
+          </div>
         </div>
+
       </div>
 
       <!-- Diller kartı -->
