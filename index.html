@@ -238,7 +238,7 @@
               <svg class="h-4 w-4 text-sky-400 group-hover:scale-110 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
               <span data-en="Preview CV">CV Önizle</span>
             </button>
-            <a href="./OsmanFurkanErkan_tr.pdf" target="_blank" rel="noopener noreferrer" download
+            <a href="./OsmanFurkanErkan_tr.pdf?v=2026-10-20" target="_blank" rel="noopener noreferrer" download
               class="js-cv group inline-flex items-center gap-2 rounded-xl px-5 py-3 text-sm font-semibold text-white
                      bg-gradient-to-r from-sky-500 via-cyan-400 to-emerald-400 bg-[length:200%_100%] bg-left
                      hover:bg-right transition-[background-position] duration-500
@@ -308,7 +308,7 @@
             <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
             <span data-en="Preview CV">CV Önizle</span>
           </button>
-          <a href="./OsmanFurkanErkan_tr.pdf" target="_blank" rel="noopener noreferrer" download class="js-cv inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-medium border transition-colors hover:text-accent hover:border-accent border-slate-300 dark:border-slate-700">
+          <a href="./OsmanFurkanErkan_tr.pdf?v=2026-10-20" target="_blank" rel="noopener noreferrer" download class="js-cv inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-medium border transition-colors hover:text-accent hover:border-accent border-slate-300 dark:border-slate-700">
             <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="M7 10l5 5 5-5"/><path d="M12 15V3"/></svg>
             <span data-en="Download CV">CV İndir</span>
           </a>
@@ -1369,7 +1369,7 @@
   <div class="rgb-dock fixed bottom-6 left-1/2 -translate-x-1/2 z-50 flex items-center backdrop-blur-md bg-slate-950/90 shadow-2xl rounded-full px-5 py-2.5 text-slate-200">
     <button type="button" class="btn-cv-preview text-xs font-mono tracking-wider hover:text-cyan-300 transition-colors flex items-center gap-1.5 cursor-pointer" data-en="👁️ CV_PREVIEW">👁️ CV_ÖNİZLE</button>
     <span class="mx-3 h-4 w-px bg-slate-600/50"></span>
-    <a href="./OsmanFurkanErkan_tr.pdf" target="_blank" rel="noopener noreferrer" download class="js-cv flex items-center gap-1.5 text-xs font-mono tracking-wider hover:text-cyan-300 transition-colors" data-en="📄 CV_DOWNLOAD">📄 CV_INDIR</a>
+    <a href="./OsmanFurkanErkan_tr.pdf?v=2026-10-20" target="_blank" rel="noopener noreferrer" download class="js-cv flex items-center gap-1.5 text-xs font-mono tracking-wider hover:text-cyan-300 transition-colors" data-en="📄 CV_DOWNLOAD">📄 CV_INDIR</a>
     <span class="mx-4 h-4 w-px bg-slate-600/50"></span>
     <button id="dockMail" class="text-xs font-mono tracking-wider hover:text-cyan-300 transition-colors" data-en="✉️ EMAIL">✉️ E-POSTA</button>
     <span class="mx-4 h-4 w-px bg-slate-600/50"></span>
@@ -1490,7 +1490,7 @@
         phNodes.forEach(function (el) {
           el.setAttribute('placeholder', (l === 'en') ? el.getAttribute('data-en-ph') : el.getAttribute('data-tr-ph'));
         });
-        var cvFile = (l === 'en') ? './OsmanFurkanErkan_eng.pdf' : './OsmanFurkanErkan_tr.pdf';
+        var cvFile = (l === 'en') ? './OsmanFurkanErkan_eng.pdf?v=2026-10-20' : './OsmanFurkanErkan_tr.pdf?v=2026-10-20';
         document.querySelectorAll('.js-cv').forEach(function (a) { a.setAttribute('href', cvFile); });
         document.documentElement.lang = l;
         if (window.__refreshDispatch) window.__refreshDispatch();
@@ -1859,7 +1859,7 @@
           <span class="font-mono text-sm font-bold text-white tracking-wide" id="cvModalTitle" data-en="📄 Osman_Furkan_Erkan_CV.pdf">📄 Osman_Furkan_Erkan_CV.pdf</span>
         </div>
         <div class="flex items-center gap-3">
-          <a id="cvModalDownloadBtn" href="./OsmanFurkanErkan_tr.pdf" download class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-mono font-medium bg-sky-500/20 text-sky-300 border border-sky-500/30 hover:bg-sky-500/30 transition-all">
+          <a id="cvModalDownloadBtn" href="./OsmanFurkanErkan_tr.pdf?v=2026-10-20" download class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-mono font-medium bg-sky-500/20 text-sky-300 border border-sky-500/30 hover:bg-sky-500/30 transition-all">
             <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="M7 10l5 5 5-5"/><path d="M12 15V3"/></svg>
             <span data-en="Download">İndir</span>
           </a>
@@ -1870,7 +1870,7 @@
       </div>
       <!-- Modal Body (Iframe) -->
       <div class="relative flex-1 bg-slate-900 overflow-hidden">
-        <iframe id="cvModalIframe" src="./OsmanFurkanErkan_tr.pdf" class="w-full h-full border-none"></iframe>
+        <iframe id="cvModalIframe" src="./OsmanFurkanErkan_tr.pdf?v=2026-10-20" class="w-full h-full border-none"></iframe>
       </div>
     </div>
   </div>
@@ -1891,7 +1891,7 @@
         var certSrc = btn ? btn.getAttribute('data-cert-src') : null;
         var certTitle = btn ? btn.getAttribute('data-cert-title') : null;
 
-        var pdf = certSrc || ((lang === 'en') ? './OsmanFurkanErkan_eng.pdf' : './OsmanFurkanErkan_tr.pdf');
+        var pdf = certSrc || ((lang === 'en') ? './OsmanFurkanErkan_eng.pdf?v=2026-10-20' : './OsmanFurkanErkan_tr.pdf?v=2026-10-20');
         iframe.src = pdf;
         if (dlBtn) dlBtn.href = pdf;
         if (title) title.textContent = certTitle ? ('📜 ' + certTitle) : ((lang === 'en') ? '📄 Osman_Furkan_Erkan_CV_eng.pdf' : '📄 Osman_Furkan_Erkan_CV_tr.pdf');
