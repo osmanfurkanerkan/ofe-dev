@@ -43,31 +43,8 @@
     rel="stylesheet"
   />
 
-  <!-- AOS -->
-  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://unpkg.com/lucide@latest"></script>
-  <script>
-    tailwind.config = {
-      darkMode: 'class',
-      theme: {
-        extend: {
-          colors: {
-            base: '#0C0F14',
-            paper: '#F5F4F0',
-            accent: '#6096BA',
-            steel: '#6096BA',
-            steeldeep: '#3D7BA6',
-          },
-          fontFamily: {
-            display: ['Outfit', 'sans-serif'],
-            mono: ['"JetBrains Mono"', 'monospace'],
-          },
-        },
-      },
-    };
-  </script>
+  <!-- AOS (sabit sürüm: @next yönlendirmesi olmadan) -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@3.0.0-beta.6/dist/aos.css" />
 
   <style>
     html { background-color: #F5F4F0; }
@@ -118,6 +95,9 @@
     /* Firefox */
     html { scrollbar-width: thin; scrollbar-color: #38bdf8 #0C0F14; }
   </style>
+
+  <!-- Tailwind: önceden derlenmiş CSS (kaynak: tailwind/ klasörü, bkz. tailwind/README.md) -->
+  <link rel="stylesheet" href="./styles.css?v=2026-10-20" />
 </head>
 
 <body class="bg-paper text-slate-900 dark:bg-base dark:text-white antialiased transition-colors duration-300">
@@ -190,7 +170,7 @@
           <div class="relative group aspect-[4/5] rounded-2xl p-[2px] overflow-hidden shadow-[0_0_35px_rgba(56,189,248,0.25)] hover:shadow-[0_0_50px_rgba(56,189,248,0.45)] transition-all duration-500">
             <div class="absolute inset-0 bg-gradient-to-r from-sky-400 via-indigo-500 to-emerald-400 animate-[spin_4s_linear_infinite]"></div>
             <div class="absolute inset-[2px] bg-[#0C0F14] rounded-[14px] z-0"></div>
-            <img src="./foto.jpg" alt="Osman Furkan Erkan"
+            <img src="./foto.webp" alt="Osman Furkan Erkan"
                  class="relative z-10 w-full h-full object-cover rounded-[14px] group-hover:scale-[1.02] transition-transform duration-500"
                  onerror="this.src='https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=600&auto=format&fit=crop&q=80'">
             <div class="absolute bottom-4 right-4 z-20 rounded-full px-3 py-1.5 flex items-center gap-2 font-mono text-xs
@@ -468,7 +448,7 @@
 
             <!-- Matris Görsel Alanı (Sıkılaştırılmış, Yumuşak Arka Planlı & Uyumlu) -->
             <div class="mt-4 p-4 rounded-xl border bg-slate-900/90 border-slate-800 dark:bg-[#080B10] dark:border-white/5 flex items-center justify-center overflow-x-auto shadow-inner">
-              <img src="https://ghchart.rshah.org/38bdf8/osmanfurkanerkan" alt="Osman Furkan Erkan GitHub Katkı Grafiği" class="w-full max-w-2xl filter contrast-125 drop-shadow-[0_0_8px_rgba(56,189,248,0.25)] rounded" decoding="async" />
+              <img src="https://ghchart.rshah.org/38bdf8/osmanfurkanerkan" loading="lazy" alt="Osman Furkan Erkan GitHub Katkı Grafiği" class="w-full max-w-2xl filter contrast-125 drop-shadow-[0_0_8px_rgba(56,189,248,0.25)] rounded" decoding="async" />
             </div>
           </div>
 
@@ -511,7 +491,7 @@
         <div class="rounded-3xl overflow-hidden grid grid-cols-1 md:grid-cols-2 h-auto md:h-[460px] border backdrop-blur-xl
                     bg-white/70 border-slate-300 dark:bg-white/[0.04] dark:border-slate-800">
           <div class="relative h-72 sm:h-80 md:h-full bg-slate-200 dark:bg-slate-900">
-            <img id="dispImg" src="./apprel.jpg" alt="Gelişme görseli" decoding="async"
+            <img id="dispImg" src="./apprel.webp" alt="Gelişme görseli" decoding="async"
                  onerror="this.src='https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=600&auto=format&fit=crop&q=80'"
                  class="fade-swap absolute inset-0 h-full w-full object-contain object-center bg-white p-8 md:p-12" />
           </div>
@@ -1100,7 +1080,7 @@
         <article data-category="ai-vision python" class="project-card group flex flex-col md:col-span-2 rounded-2xl border p-5 transition-all duration-[400ms] ease-out border-slate-300 dark:border-slate-800 bg-white/70 dark:bg-white/[0.03] hover:-translate-y-2 hover:border-violet-500/40 hover:shadow-xl hover:shadow-violet-500/10" data-aos="fade-up" data-aos-delay="40">
           <div class="grid grid-cols-1 md:grid-cols-2 gap-5 items-center">
             <a href="https://github.com/osmanfurkanerkan/geziguru" target="_blank" rel="noopener noreferrer" class="relative block overflow-hidden rounded-xl border border-slate-200 dark:border-slate-700">
-              <img src="./geziguru.png" alt="GeziGuru çok-ajanlı seyahat asistanı arayüzü" loading="lazy" class="w-full h-56 md:h-64 object-cover object-top transition-transform duration-500 group-hover:scale-105" />
+              <img src="./geziguru.webp" alt="GeziGuru çok-ajanlı seyahat asistanı arayüzü" loading="lazy" class="w-full h-56 md:h-64 object-cover object-top transition-transform duration-500 group-hover:scale-105" />
               <span class="absolute top-2 left-2 inline-flex items-center gap-1.5 font-mono text-[10px] px-2 py-1 rounded-md bg-violet-500/90 text-white shadow-lg"><span class="h-1.5 w-1.5 rounded-full bg-white animate-pulse"></span> <span data-en="GOOGLE CAPSTONE">GOOGLE CAPSTONE</span></span>
             </a>
             <div class="flex flex-col">
@@ -1125,7 +1105,7 @@
         <article data-category="ai-vision python" class="project-card group flex flex-col md:col-span-2 rounded-2xl border p-5 transition-all duration-[400ms] ease-out border-slate-300 dark:border-slate-800 bg-white/70 dark:bg-white/[0.03] hover:-translate-y-2 hover:border-sky-500/40 hover:shadow-xl hover:shadow-sky-500/10" data-aos="fade-up" data-aos-delay="40">
           <div class="grid grid-cols-1 md:grid-cols-2 gap-5 items-center">
             <a href="https://turbofan-rul-prediction-cr6qmdkv4lmgh3zj22shyu.streamlit.app" target="_blank" rel="noopener noreferrer" class="relative block overflow-hidden rounded-xl border border-slate-200 dark:border-slate-700">
-              <img src="./proje.png" alt="Turbofan RUL tahmin paneli" loading="lazy" class="w-full h-56 md:h-64 object-cover object-top transition-transform duration-500 group-hover:scale-105" />
+              <img src="./proje.webp" alt="Turbofan RUL tahmin paneli" loading="lazy" class="w-full h-56 md:h-64 object-cover object-top transition-transform duration-500 group-hover:scale-105" />
               <span class="absolute top-2 left-2 inline-flex items-center gap-1.5 font-mono text-[10px] px-2 py-1 rounded-md bg-emerald-500/90 text-white shadow-lg"><span class="h-1.5 w-1.5 rounded-full bg-white animate-pulse"></span> <span data-en="LIVE DEMO">CANLI DEMO</span></span>
             </a>
             <div class="flex flex-col">
@@ -1385,9 +1365,6 @@
 
   <!-- ================= VANILLA JS ================= -->
   <script>
-    // Lucide (varsa)
-    if (window.lucide && lucide.createIcons) { try { lucide.createIcons(); } catch (e) {} }
-
     // ---- E-posta gizleme (bot harvest koruması): adres parça parça kurulur ----
     (function () {
       var user = 'osmanfurknerkan';
@@ -1526,18 +1503,18 @@
     (function () {
       var FALLBACK = 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=600&auto=format&fit=crop&q=80';
       var data = [
-        { img: './apprel.jpg', fit: 'contain', tag: '2026-10 · STAJ / YENİ GÖREV', tag_en: '2026-10 · INTERNSHIP / NEW ROLE', title: "Apprel'de AI/ML Engineer Intern", title_en: 'AI/ML Engineer Intern at Apprel', desc: "Lüksemburg merkezli yapay zeka destekli moda ve kişisel stil girişimi Apprel'de AI/ML Engineer Intern olarak yeni bir göreve başladım. Bu süreçte yapay zeka geliştirme süreçlerinde yer alacak, yeni teknolojileri uygulamalı olarak deneyimleme ve kendimi geliştirme fırsatı bulacağım. Bu harika fırsat için Apprel ekibine teşekkür ederim!", desc_en: "I started a new position as an AI/ML Engineer Intern at Apprel, a Luxembourg-based startup building an AI-powered fashion and personal styling app. I'm excited to take part in AI development processes, work with new technologies and gain valuable hands-on experience alongside a great team. Thanks to the Apprel team for this opportunity!" },
-        { img: './kapsul.jpg',       tag: '2026-08 · YAZ OKULU',        tag_en: '2026-08 · SUMMER SCHOOL',   title: 'KAPSÜL Yaz Okulu', title_en: 'KAPSÜL Summer School', desc: "Savunma Sanayii Akademi'nin düzenlediği KAPSÜL Yaz Okulu'nu Cumhurbaşkanlığı Millet Kütüphanesi'nde başarıyla tamamlamanın gururunu yaşıyorum. Sektörün öncü isimlerinden savunma sanayimizin dinamiklerini ve stratejik vizyonunu dinlemek, bir bilgisayar mühendisi adayı olarak benim için oldukça ufuk açıcı bir deneyimdi. Milli teknolojilerimizi geliştirme yolunda bana kattığı bu değerli vizyon için Savunma Sanayii Başkanlığı'na ve emeği geçen tüm eğitmenlerimize teşekkür ederim.", desc_en: "I am proud to have successfully completed the KAPSÜL Summer School organized by the Defense Industry Academy at the Presidential Nation Library. Listening to the dynamics and strategic vision of our defense industry from leading experts in the sector was an eye-opening experience for me as a computer engineering candidate. I would like to thank the Presidency of Defense Industries and all our instructors for providing this valuable vision on the path to developing our national technologies." },
-        { img: './allstar.jpg',     tag: '2026-07 · HACKATHON / FİNAL', tag_en: '2026-07 · HACKATHON / FINAL', title: 'Turkcell Code Night All-Star Finali', title_en: 'Turkcell Code Night All-Star Final', desc: "Turkcell Code Night'ın İzmir etabındaki 2.'lik derecemizin ardından, ekip arkadaşlarım Mehmet Ali Sevdinoğlu ve İskender Guliyev ile Turkcell Geleceği Yazanlar Code Night All-Star 2026 finalinde yer aldık. Türkiye'nin farklı şehirlerinde dereceye giren ekiplerin buluştuğu organizasyonda, kısıtlı sürede gerçek bir iş problemine çözüm üretmeye çalıştığımız uykusuz bir vaka maratonunu geride bıraktık; yeni teknik yaklaşımlar denediğimiz ve zaman kısıtı altında takım olarak çalıştığımız bu final, vizyonumuzu genişleten kıymetli bir deneyim oldu.", desc_en: "Following our 2nd place finish at the Turkcell Code Night İzmir stage, I had the opportunity to compete in the Code Night All-Star 2026 final alongside my teammates Mehmet Ali Sevdinoğlu and İskender Guliyev. Competing alongside top teams from across Turkey, trying to solve a real business problem in a limited time and completing a sleepless case marathon was a highly instructive process — a final where we tested new technical approaches and experienced teamwork under time constraints, broadening our vision." },
-        { img: './sertifika.png',      tag: '2026-06 · SERTİFİKA / EĞİTİM', tag_en: '2026-06 · CERTIFICATE / COURSE', title: 'Veri Bilimi & Makine Öğrenmesi Kampı', title_en: 'Data Science & ML Bootcamp', desc: "Atıl Samancıoğlu'nun 61,5 saatlik Veri Bilimi & Makine Öğrenmesi kampını tamamladım (Python, istatistik, EDA, feature engineering, denetimli/denetimsiz öğrenme, XGBoost). Üstüne bitirme projemi geliştirdim: NASA C-MAPSS turbofan motorlarının kalan ömrünü tahmin eden, canlıya alınmış uçtan uca bir ML uygulaması.", desc_en: "I completed Atıl Samancıoğlu's 61.5-hour Data Science & Machine Learning bootcamp (Python, statistics, EDA, feature engineering, supervised/unsupervised learning, XGBoost). On top of it I built my capstone: a deployed end-to-end ML app predicting the Remaining Useful Life of NASA C-MAPSS turbofan engines." },
-        { img: './roketsan.jpg',       tag: '2026-05 · ZİRVE',             tag_en: '2026-05 · SUMMIT',           title: 'ROKETSAN Gençlik Buluşması',        title_en: 'ROKETSAN Youth Meetup',              desc: "19 Mayıs Atatürk'ü Anma, Gençlik ve Spor Bayramı coşkusunu ROKETSAN ev sahipliğinde düzenlenen zirvede, savunma sanayimizin kalbinde deneyimledim.", desc_en: "I experienced the spirit of the May 19th Commemoration of Atatürk, Youth and Sports Day at a summit hosted by ROKETSAN, in the heart of our defense industry." },
-        { img: './ıhlamur.jpg',        tag: '2026-05 · ORGANİZASYON',      tag_en: '2026-05 · ORGANIZATION',     title: 'EBMT Söyleşi: Murat Ihlamur',       title_en: 'EBMT Talk: Murat Ihlamur',           desc: "Kurucu Bşk. Yrd. olduğum EBMT ev sahipliğinde Netsis kurucusu Murat Ihlamur ile yazılım girişimciliği ve startup ekosistemini masaya yatırdık.", desc_en: "Hosted by EBMT, where I am Founding Vice President, we explored software entrepreneurship and the startup ecosystem with Netsis founder Murat Ihlamur." },
-        { img: './söyleşi.jpg',        tag: '2026-05 · ORGANİZASYON',      tag_en: '2026-05 · ORGANIZATION',     title: 'EBMT Söyleşi: Yapay Zeka & Toplum', title_en: 'EBMT Talk: AI & Society',             desc: "Prof. Dr. Oğuz Dikenelli ve Yük. Müh. İlker Kalaycı katılımıyla yapay zekanın toplumsal etkilerini incelediğimiz söyleşiyi koordine ettim.", desc_en: "I coordinated a talk examining the societal impacts of artificial intelligence, featuring Prof. Dr. Oğuz Dikenelli and M.Sc. Eng. İlker Kalaycı." },
-        { img: './microsoft.jpg',      tag: '2026-04 · STAJ / KABUL',      tag_en: '2026-04 · INTERNSHIP / OFFER', title: 'Microsoft AI Yaz Stajı Kabulü',   title_en: 'Microsoft AI Summer Internship Offer', desc: "Microsoft Türkiye bünyesinde gerçekleşecek olan Microsoft AI Innovators Summer Internship Programı'na seçilmeye hak kazandım.", desc_en: "I was selected for the Microsoft AI Innovators Summer Internship Program to be held at Microsoft Türkiye." },
-        { img: './aspire.jpg',         tag: '2026-03 · GLOBAL LİDERLİK',   tag_en: '2026-03 · GLOBAL LEADERSHIP', title: 'Aspire CAL Global Liderlik',       title_en: 'Aspire CAL Global Leadership',       desc: "Genç liderleri destekleyen küresel girişim Aspire Institute bünyesinde Campus Ambassador Leader - CAL olarak seçildim.", desc_en: "I was selected as a Campus Ambassador Leader (CAL) within Aspire Institute, a global initiative supporting young leaders." },
-        { img: './anadolusigorta.jpg', tag: '2026-02 · GENÇLİK SENATOSU',  tag_en: '2026-02 · YOUTH SENATE',      title: 'Anadolu Sigorta Young Vision',      title_en: 'Anadolu Sigorta Young Vision',       desc: "Anadolu Sigorta'nın gençlere özel gelişim programı Young Vision ile altı ay sürecek ilham dolu bir yolculuğa adım attım. Fikirlerimizi özgürce paylaştığımız, iş dünyasının trendlerini keşfettiğimiz ve köklü bir deneyimle geleceği bugünden şekillendirdiğimiz harika bir serüven.", desc_en: "I embarked on a six-month inspiring journey with Anadolu Sigorta's youth development program Young Vision — a wonderful adventure where we freely shared ideas, explored business-world trends and shaped the future today through a deep-rooted experience." },
-        { img: './türkcell.jpg',       tag: '2026-01 · HACKATHON',         tag_en: '2026-01 · HACKATHON',        title: 'Turkcell Code Night 2.liği',        title_en: 'Turkcell Code Night 2nd Place',      desc: "Gece boyu süren vaka maratonunda geliştirdiğimiz REST API tabanlı full-stack çözümle İzmir 2.si olarak All-Star İstanbul biletini kazandık.", desc_en: "With the REST API-based full-stack solution we built in the overnight case marathon, we finished 2nd in İzmir and earned an All-Star İstanbul ticket." },
-        { img: './tübitak.jpg',        tag: '2026-01 · AR-GE / PROJE',     tag_en: '2026-01 · R&D / PROJECT',    title: 'TÜBİTAK STAR Araştırmacılığı',      title_en: 'TÜBİTAK STAR Researcher',            desc: "LimbuStem bünyesindeki TEYDEB projesinde Prof. Dr. Özlem Barut Selver ve Prof. Dr. Alper Selver danışmanlığında AI tabanlı kornea alıcı belirleme sisteminde görev aldım.", desc_en: "In the TEYDEB project at LimbuStem, I worked on an AI-based corneal recipient identification system under the supervision of Prof. Dr. Özlem Barut Selver and Prof. Dr. Alper Selver." }
+        { img: './apprel.webp', fit: 'contain', tag: '2026-10 · STAJ / YENİ GÖREV', tag_en: '2026-10 · INTERNSHIP / NEW ROLE', title: "Apprel'de AI/ML Engineer Intern", title_en: 'AI/ML Engineer Intern at Apprel', desc: "Lüksemburg merkezli yapay zeka destekli moda ve kişisel stil girişimi Apprel'de AI/ML Engineer Intern olarak yeni bir göreve başladım. Bu süreçte yapay zeka geliştirme süreçlerinde yer alacak, yeni teknolojileri uygulamalı olarak deneyimleme ve kendimi geliştirme fırsatı bulacağım. Bu harika fırsat için Apprel ekibine teşekkür ederim!", desc_en: "I started a new position as an AI/ML Engineer Intern at Apprel, a Luxembourg-based startup building an AI-powered fashion and personal styling app. I'm excited to take part in AI development processes, work with new technologies and gain valuable hands-on experience alongside a great team. Thanks to the Apprel team for this opportunity!" },
+        { img: './kapsul.webp',       tag: '2026-08 · YAZ OKULU',        tag_en: '2026-08 · SUMMER SCHOOL',   title: 'KAPSÜL Yaz Okulu', title_en: 'KAPSÜL Summer School', desc: "Savunma Sanayii Akademi'nin düzenlediği KAPSÜL Yaz Okulu'nu Cumhurbaşkanlığı Millet Kütüphanesi'nde başarıyla tamamlamanın gururunu yaşıyorum. Sektörün öncü isimlerinden savunma sanayimizin dinamiklerini ve stratejik vizyonunu dinlemek, bir bilgisayar mühendisi adayı olarak benim için oldukça ufuk açıcı bir deneyimdi. Milli teknolojilerimizi geliştirme yolunda bana kattığı bu değerli vizyon için Savunma Sanayii Başkanlığı'na ve emeği geçen tüm eğitmenlerimize teşekkür ederim.", desc_en: "I am proud to have successfully completed the KAPSÜL Summer School organized by the Defense Industry Academy at the Presidential Nation Library. Listening to the dynamics and strategic vision of our defense industry from leading experts in the sector was an eye-opening experience for me as a computer engineering candidate. I would like to thank the Presidency of Defense Industries and all our instructors for providing this valuable vision on the path to developing our national technologies." },
+        { img: './allstar.webp',     tag: '2026-07 · HACKATHON / FİNAL', tag_en: '2026-07 · HACKATHON / FINAL', title: 'Turkcell Code Night All-Star Finali', title_en: 'Turkcell Code Night All-Star Final', desc: "Turkcell Code Night'ın İzmir etabındaki 2.'lik derecemizin ardından, ekip arkadaşlarım Mehmet Ali Sevdinoğlu ve İskender Guliyev ile Turkcell Geleceği Yazanlar Code Night All-Star 2026 finalinde yer aldık. Türkiye'nin farklı şehirlerinde dereceye giren ekiplerin buluştuğu organizasyonda, kısıtlı sürede gerçek bir iş problemine çözüm üretmeye çalıştığımız uykusuz bir vaka maratonunu geride bıraktık; yeni teknik yaklaşımlar denediğimiz ve zaman kısıtı altında takım olarak çalıştığımız bu final, vizyonumuzu genişleten kıymetli bir deneyim oldu.", desc_en: "Following our 2nd place finish at the Turkcell Code Night İzmir stage, I had the opportunity to compete in the Code Night All-Star 2026 final alongside my teammates Mehmet Ali Sevdinoğlu and İskender Guliyev. Competing alongside top teams from across Turkey, trying to solve a real business problem in a limited time and completing a sleepless case marathon was a highly instructive process — a final where we tested new technical approaches and experienced teamwork under time constraints, broadening our vision." },
+        { img: './sertifika.webp',      tag: '2026-06 · SERTİFİKA / EĞİTİM', tag_en: '2026-06 · CERTIFICATE / COURSE', title: 'Veri Bilimi & Makine Öğrenmesi Kampı', title_en: 'Data Science & ML Bootcamp', desc: "Atıl Samancıoğlu'nun 61,5 saatlik Veri Bilimi & Makine Öğrenmesi kampını tamamladım (Python, istatistik, EDA, feature engineering, denetimli/denetimsiz öğrenme, XGBoost). Üstüne bitirme projemi geliştirdim: NASA C-MAPSS turbofan motorlarının kalan ömrünü tahmin eden, canlıya alınmış uçtan uca bir ML uygulaması.", desc_en: "I completed Atıl Samancıoğlu's 61.5-hour Data Science & Machine Learning bootcamp (Python, statistics, EDA, feature engineering, supervised/unsupervised learning, XGBoost). On top of it I built my capstone: a deployed end-to-end ML app predicting the Remaining Useful Life of NASA C-MAPSS turbofan engines." },
+        { img: './roketsan.webp',       tag: '2026-05 · ZİRVE',             tag_en: '2026-05 · SUMMIT',           title: 'ROKETSAN Gençlik Buluşması',        title_en: 'ROKETSAN Youth Meetup',              desc: "19 Mayıs Atatürk'ü Anma, Gençlik ve Spor Bayramı coşkusunu ROKETSAN ev sahipliğinde düzenlenen zirvede, savunma sanayimizin kalbinde deneyimledim.", desc_en: "I experienced the spirit of the May 19th Commemoration of Atatürk, Youth and Sports Day at a summit hosted by ROKETSAN, in the heart of our defense industry." },
+        { img: './ıhlamur.webp',        tag: '2026-05 · ORGANİZASYON',      tag_en: '2026-05 · ORGANIZATION',     title: 'EBMT Söyleşi: Murat Ihlamur',       title_en: 'EBMT Talk: Murat Ihlamur',           desc: "Kurucu Bşk. Yrd. olduğum EBMT ev sahipliğinde Netsis kurucusu Murat Ihlamur ile yazılım girişimciliği ve startup ekosistemini masaya yatırdık.", desc_en: "Hosted by EBMT, where I am Founding Vice President, we explored software entrepreneurship and the startup ecosystem with Netsis founder Murat Ihlamur." },
+        { img: './söyleşi.webp',        tag: '2026-05 · ORGANİZASYON',      tag_en: '2026-05 · ORGANIZATION',     title: 'EBMT Söyleşi: Yapay Zeka & Toplum', title_en: 'EBMT Talk: AI & Society',             desc: "Prof. Dr. Oğuz Dikenelli ve Yük. Müh. İlker Kalaycı katılımıyla yapay zekanın toplumsal etkilerini incelediğimiz söyleşiyi koordine ettim.", desc_en: "I coordinated a talk examining the societal impacts of artificial intelligence, featuring Prof. Dr. Oğuz Dikenelli and M.Sc. Eng. İlker Kalaycı." },
+        { img: './microsoft.webp',      tag: '2026-04 · STAJ / KABUL',      tag_en: '2026-04 · INTERNSHIP / OFFER', title: 'Microsoft AI Yaz Stajı Kabulü',   title_en: 'Microsoft AI Summer Internship Offer', desc: "Microsoft Türkiye bünyesinde gerçekleşecek olan Microsoft AI Innovators Summer Internship Programı'na seçilmeye hak kazandım.", desc_en: "I was selected for the Microsoft AI Innovators Summer Internship Program to be held at Microsoft Türkiye." },
+        { img: './aspire.webp',         tag: '2026-03 · GLOBAL LİDERLİK',   tag_en: '2026-03 · GLOBAL LEADERSHIP', title: 'Aspire CAL Global Liderlik',       title_en: 'Aspire CAL Global Leadership',       desc: "Genç liderleri destekleyen küresel girişim Aspire Institute bünyesinde Campus Ambassador Leader - CAL olarak seçildim.", desc_en: "I was selected as a Campus Ambassador Leader (CAL) within Aspire Institute, a global initiative supporting young leaders." },
+        { img: './anadolusigorta.webp', tag: '2026-02 · GENÇLİK SENATOSU',  tag_en: '2026-02 · YOUTH SENATE',      title: 'Anadolu Sigorta Young Vision',      title_en: 'Anadolu Sigorta Young Vision',       desc: "Anadolu Sigorta'nın gençlere özel gelişim programı Young Vision ile altı ay sürecek ilham dolu bir yolculuğa adım attım. Fikirlerimizi özgürce paylaştığımız, iş dünyasının trendlerini keşfettiğimiz ve köklü bir deneyimle geleceği bugünden şekillendirdiğimiz harika bir serüven.", desc_en: "I embarked on a six-month inspiring journey with Anadolu Sigorta's youth development program Young Vision — a wonderful adventure where we freely shared ideas, explored business-world trends and shaped the future today through a deep-rooted experience." },
+        { img: './türkcell.webp',       tag: '2026-01 · HACKATHON',         tag_en: '2026-01 · HACKATHON',        title: 'Turkcell Code Night 2.liği',        title_en: 'Turkcell Code Night 2nd Place',      desc: "Gece boyu süren vaka maratonunda geliştirdiğimiz REST API tabanlı full-stack çözümle İzmir 2.si olarak All-Star İstanbul biletini kazandık.", desc_en: "With the REST API-based full-stack solution we built in the overnight case marathon, we finished 2nd in İzmir and earned an All-Star İstanbul ticket." },
+        { img: './tübitak.webp',        tag: '2026-01 · AR-GE / PROJE',     tag_en: '2026-01 · R&D / PROJECT',    title: 'TÜBİTAK STAR Araştırmacılığı',      title_en: 'TÜBİTAK STAR Researcher',            desc: "LimbuStem bünyesindeki TEYDEB projesinde Prof. Dr. Özlem Barut Selver ve Prof. Dr. Alper Selver danışmanlığında AI tabanlı kornea alıcı belirleme sisteminde görev aldım.", desc_en: "In the TEYDEB project at LimbuStem, I worked on an AI-based corneal recipient identification system under the supervision of Prof. Dr. Özlem Barut Selver and Prof. Dr. Alper Selver." }
       ];
 
       var img = document.getElementById('dispImg'), tag = document.getElementById('dispTag'),
@@ -1830,7 +1807,17 @@
           }
         }
 
-        requestAnimationFrame(step);
+        if (visible) requestAnimationFrame(step); else running = false;
+      }
+
+      // Hero ekranda değilken animasyonu durdur (gereksiz işlemci kullanımı olmasın)
+      var visible = true, running = false;
+      function start() { if (!running) { running = true; requestAnimationFrame(step); } }
+      if ('IntersectionObserver' in window) {
+        new IntersectionObserver(function (entries) {
+          visible = entries[0].isIntersecting;
+          if (visible) start();
+        }).observe(hero);
       }
 
       hero.addEventListener('mousemove', function (e) {
@@ -1845,7 +1832,7 @@
 
       size();
       makeParticles();
-      step();
+      start();
     })();
   </script>
 
@@ -1870,7 +1857,7 @@
       </div>
       <!-- Modal Body (Iframe) -->
       <div class="relative flex-1 bg-slate-900 overflow-hidden">
-        <iframe id="cvModalIframe" src="./OsmanFurkanErkan_tr.pdf?v=2026-10-20" class="w-full h-full border-none"></iframe>
+        <iframe id="cvModalIframe" src="about:blank" class="w-full h-full border-none"></iframe>
       </div>
     </div>
   </div>
@@ -1904,6 +1891,7 @@
         modal.classList.add('hidden');
         modal.classList.remove('flex');
         document.body.style.overflow = '';
+        iframe.src = 'about:blank'; // kapalıyken PDF görüntüleyiciyi bellekte tutma
       }
 
       document.querySelectorAll('.btn-cv-preview').forEach(function (btn) {
@@ -1921,7 +1909,7 @@
   </script>
 
   <!-- AOS -->
-  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script src="https://unpkg.com/aos@3.0.0-beta.6/dist/aos.js"></script>
   <script>AOS.init({ duration: 800, once: false, mirror: true });</script>
 </body>
 </html>
