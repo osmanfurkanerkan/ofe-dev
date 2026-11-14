@@ -30,9 +30,10 @@
   <script>
     (function () {
       try {
+        // Kayıtlı tercih varsa onu, yoksa işletim sisteminin temasını kullan
         var t = localStorage.getItem('theme');
-        if (t === 'light') document.documentElement.classList.remove('dark');
-        else document.documentElement.classList.add('dark');
+        var dark = t ? (t === 'dark') : window.matchMedia('(prefers-color-scheme: dark)').matches;
+        document.documentElement.classList.toggle('dark', dark);
       } catch (e) {}
     })();
   </script>
@@ -81,13 +82,16 @@
       <!-- SAĞ KONTROLLER & HOLLOW NEON CTA -->
       <div class="flex items-center gap-2">
         <!-- Dil Switcher (Segmented Pill) -->
-        <div class="flex items-center bg-white/[0.03] border border-white/[0.08] p-0.5 rounded-full font-mono text-xs">
-          <button id="lang-btn-tr" class="px-2.5 py-1 rounded-full text-white bg-white/12 font-medium transition-all duration-300 cursor-pointer">TR</button>
-          <button id="lang-btn-en" class="px-2.5 py-1 rounded-full text-slate-400 hover:text-slate-200 transition-all duration-300 cursor-pointer">EN</button>
+        <div role="group" aria-label="Dil seçimi" data-en-aria="Language" class="flex items-center bg-surface-2 border border-line p-0.5 rounded-full font-mono text-xs">
+          <button type="button" id="lang-btn-tr" lang="tr" aria-pressed="true" class="min-w-9 px-2.5 py-1.5 rounded-full text-muted hover:text-ink aria-pressed:bg-surface aria-pressed:text-ink aria-pressed:font-medium transition-colors cursor-pointer">TR</button>
+          <button type="button" id="lang-btn-en" lang="en" aria-pressed="false" class="min-w-9 px-2.5 py-1.5 rounded-full text-muted hover:text-ink aria-pressed:bg-surface aria-pressed:text-ink aria-pressed:font-medium transition-colors cursor-pointer">EN</button>
         </div>
 
-        <!-- Tema-JS shim (görünmez; tema alttaki MOD düğmesinden değişir) -->
-        <button id="themeToggle" aria-hidden="true" tabindex="-1" class="hidden"></button>
+        <!-- Tema butonu (dock'taki MOD butonuyla aynı fonksiyonu çağırır) -->
+        <button type="button" id="themeToggle" aria-pressed="false" aria-label="Temayı değiştir" data-en-aria="Toggle theme" class="h-9 w-9 grid place-items-center rounded-full border border-line text-muted hover:text-ink hover:border-line-strong transition-colors cursor-pointer">
+          <svg class="h-4 w-4 dark:hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+          <svg class="h-4 w-4 hidden dark:block" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+        </button>
 
         <!-- Hollow Neon Pill Button -->
         <a href="#contact" class="relative group inline-flex items-center justify-center p-[1px] rounded-full overflow-hidden font-mono text-xs">
@@ -1315,6 +1319,48 @@
 
   <!-- ================= VANILLA JS ================= -->
   <script>
+    // ---- Ortak: hareketi azalt tercihi + JS içindeki metinlerin sözlüğü (TR / EN) ----
+    var REDUCED = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var I18N = {
+      tr: {
+        copied: 'KOPYALANDI ✓',
+        copiedSr: 'E-posta adresi panoya kopyalandı.',
+        sending: 'Gönderiliyor…',
+        sent: 'Mesajınız alındı, teşekkürler.',
+        error: 'Bir hata oluştu. Lütfen tekrar deneyin.',
+        drawerShow: '[ + Diğer Onaylı Eğitim & Atölye Sertifikalarını Göster ({n}) ]',
+        drawerHide: '[ − Diğer Sertifikaları Gizle ]',
+        cvTitle: 'Osman_Furkan_Erkan_CV_tr.pdf',
+        cvFrame: 'CV önizleme',
+        newTab: '(yeni sekmede açılır)',
+        projCount: '{n} proje gösteriliyor',
+        certCount: '{n} sertifika gösteriliyor',
+        dispItem: 'Gelişme {n}: {t}'
+      },
+      en: {
+        copied: 'COPIED ✓',
+        copiedSr: 'Email address copied to clipboard.',
+        sending: 'Sending…',
+        sent: 'Your message has been received, thank you.',
+        error: 'Something went wrong. Please try again.',
+        drawerShow: '[ + Show Other Verified Training & Workshop Certificates ({n}) ]',
+        drawerHide: '[ − Hide Additional Certificates ]',
+        cvTitle: 'Osman_Furkan_Erkan_CV_eng.pdf',
+        cvFrame: 'CV preview',
+        newTab: '(opens in new tab)',
+        projCount: 'Showing {n} projects',
+        certCount: 'Showing {n} certificates',
+        dispItem: 'Update {n}: {t}'
+      }
+    };
+    function t(key, vars) {
+      var s = (I18N[window.SITE_LANG === 'en' ? 'en' : 'tr'][key]) || '';
+      if (vars) Object.keys(vars).forEach(function (k) { s = s.replace('{' + k + '}', vars[k]); });
+      return s;
+    }
+    // Dil değişince çalışacak fonksiyonlar buraya eklenir
+    window.__onLang = [];
+
     // ---- E-posta gizleme (bot harvest koruması): adres parça parça kurulur ----
     (function () {
       var user = 'osmanfurknerkan';
@@ -1377,14 +1423,29 @@
 
     // ---- Tema toggle (navbar + dock) ----
     var root = document.documentElement;
+    var themeBtns = [document.getElementById('themeToggle'), document.getElementById('dockThemeToggle')].filter(Boolean);
+    function syncThemeButtons() {
+      var dark = root.classList.contains('dark');
+      themeBtns.forEach(function (b) { b.setAttribute('aria-pressed', dark ? 'true' : 'false'); });
+    }
     function toggleTheme() {
       root.classList.toggle('dark');
       try { localStorage.setItem('theme', root.classList.contains('dark') ? 'dark' : 'light'); } catch (e) {}
+      syncThemeButtons();
       if (window.AOS) AOS.refresh();
     }
-    document.getElementById('themeToggle').addEventListener('click', toggleTheme);
-    var dockToggle = document.getElementById('dockThemeToggle');
-    if (dockToggle) dockToggle.addEventListener('click', toggleTheme);
+    themeBtns.forEach(function (b) { b.addEventListener('click', toggleTheme); });
+    syncThemeButtons();
+    // Kayıtlı tercih yoksa, işletim sistemi teması değişince siteyi de değiştir
+    try {
+      window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function (e) {
+        var saved = null;
+        try { saved = localStorage.getItem('theme'); } catch (err) {}
+        if (saved) return;
+        root.classList.toggle('dark', e.matches);
+        syncThemeButtons();
+      });
+    } catch (e) {}
 
     // ---- Dil değiştirici (TR / EN) — Segmented Pill + pürüzsüz fade ----
     (function () {
@@ -1392,21 +1453,28 @@
       var btnEn = document.getElementById('lang-btn-en');
       if (!btnTr || !btnEn) return;
 
+      // Yeni sekmede açılan linklere ekran okuyucu için "(yeni sekmede açılır)" notu
+      document.querySelectorAll('a[target="_blank"]').forEach(function (a) {
+        if (a.hasAttribute('data-en')) return;
+        var sr = document.createElement('span');
+        sr.className = 'sr-only js-newtab';
+        a.appendChild(sr);
+      });
+
       var nodes = document.querySelectorAll('[data-en]');
       var phNodes = document.querySelectorAll('[data-en-ph]');
+      var ariaNodes = document.querySelectorAll('[data-en-aria]');
       // TR taban metinlerini yakala + her düğüme yumuşak opacity geçişi tanımla
       nodes.forEach(function (el) {
         el.setAttribute('data-tr', el.textContent);
-        el.style.transition = 'opacity .22s ease';
+        if (!REDUCED) el.style.transition = 'opacity .22s ease';
       });
       phNodes.forEach(function (el) { el.setAttribute('data-tr-ph', el.getAttribute('placeholder') || ''); });
+      ariaNodes.forEach(function (el) { el.setAttribute('data-tr-aria', el.getAttribute('aria-label') || ''); });
 
-      var ACT = ['text-white', 'bg-white/12', 'font-medium'];
-      var IDLE = ['text-slate-400', 'hover:text-slate-200'];
       function setButtons(l) {
-        var on = (l === 'en') ? btnEn : btnTr, off = (l === 'en') ? btnTr : btnEn;
-        ACT.forEach(function (c) { on.classList.add(c); off.classList.remove(c); });
-        IDLE.forEach(function (c) { off.classList.add(c); on.classList.remove(c); });
+        btnTr.setAttribute('aria-pressed', l === 'tr' ? 'true' : 'false');
+        btnEn.setAttribute('aria-pressed', l === 'en' ? 'true' : 'false');
       }
 
       function swap(l) {
@@ -1417,10 +1485,14 @@
         phNodes.forEach(function (el) {
           el.setAttribute('placeholder', (l === 'en') ? el.getAttribute('data-en-ph') : el.getAttribute('data-tr-ph'));
         });
+        ariaNodes.forEach(function (el) {
+          el.setAttribute('aria-label', (l === 'en') ? el.getAttribute('data-en-aria') : el.getAttribute('data-tr-aria'));
+        });
+        document.querySelectorAll('.js-newtab').forEach(function (sr) { sr.textContent = ' ' + t('newTab'); });
         var cvFile = (l === 'en') ? './OsmanFurkanErkan_eng.pdf?v=2026-10-20' : './OsmanFurkanErkan_tr.pdf?v=2026-10-20';
         document.querySelectorAll('.js-cv').forEach(function (a) { a.setAttribute('href', cvFile); });
         document.documentElement.lang = l;
-        if (window.__refreshDispatch) window.__refreshDispatch();
+        window.__onLang.forEach(function (fn) { try { fn(l); } catch (e) {} });
       }
 
       var current = null, busy = false;
@@ -1429,7 +1501,7 @@
         current = l;
         setButtons(l);
         try { localStorage.setItem('lang', l); } catch (e) {}
-        if (instant) { swap(l); return; }
+        if (instant || REDUCED) { swap(l); return; }
         if (busy) return;
         busy = true;
         nodes.forEach(function (el) { el.style.opacity = '0'; });   // fade out
@@ -1446,7 +1518,8 @@
       // kayıtlı tercih (ilk yüklemede anında, fade'siz)
       var saved = 'tr';
       try { if (localStorage.getItem('lang') === 'en') saved = 'en'; } catch (e) {}
-      apply(saved, true);
+      // Diğer bloklar (Gelişmeler, sertifikalar…) kendi dinleyicilerini ekledikten sonra uygula
+      window.__applySavedLang = function () { apply(saved, true); };
     })();
 
     // ---- Gelişmeler vitrini (10 sekme, sabit yükseklik) ----
@@ -1521,7 +1594,7 @@
       else setTimeout(preloadSlides, 1500);
 
       setBtn(0); restart();
-      window.__refreshDispatch(); // ilk slaytı mevcut dile göre çiz
+      window.__onLang.push(window.__refreshDispatch);
     })();
 
     // ---- İletişim formu (FormSubmit AJAX) ----
@@ -1860,6 +1933,9 @@
 
   <!-- AOS -->
   <script src="https://unpkg.com/aos@3.0.0-beta.6/dist/aos.js"></script>
-  <script>AOS.init({ duration: 800, once: false, mirror: true });</script>
+  <script>
+    if (window.__applySavedLang) window.__applySavedLang();
+    if (window.AOS) AOS.init({ duration: 500, once: true, offset: 60, easing: 'ease-out-cubic', disable: REDUCED });
+  </script>
 </body>
 </html>
