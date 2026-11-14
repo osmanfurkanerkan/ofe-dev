@@ -441,44 +441,42 @@
       </div>
     </section>
 
-    <!-- ================= GELİŞMELER VİTRİNİ (12 SEKME) ================= -->
-    <section id="dispatch" class="py-16 border-t border-slate-300 dark:border-slate-800" data-aos="fade-up">
-      <p class="font-mono text-xs text-accent tracking-widest mb-3">// 03 — TECH DISPATCH</p>
-      <h2 class="font-display text-3xl font-bold mb-8" data-en="Updates">Gelişmeler</h2>
+    <!-- ================= GELİŞMELER VİTRİNİ (12 SEKME, sadece tıklayınca geçer) ================= -->
+    <section id="dispatch" class="py-14 md:py-20 border-t border-line" data-aos="fade-up">
+      <p class="font-mono text-xs font-medium text-accent-text tracking-[0.14em] mb-3" data-en="// 03 — UPDATES">// 03 — GELİŞMELER</p>
+      <h2 class="font-display text-3xl sm:text-4xl font-semibold" data-en="Updates">Gelişmeler</h2>
 
-      <div class="max-w-5xl mx-auto" data-aos="fade-up" data-aos-delay="80">
-        <div class="rounded-3xl overflow-hidden grid grid-cols-1 md:grid-cols-2 h-auto md:h-[460px] border backdrop-blur-xl
-                    bg-white/70 border-slate-300 dark:bg-white/[0.04] dark:border-slate-800">
-          <div class="relative h-72 sm:h-80 md:h-full bg-slate-200 dark:bg-slate-900">
-            <img id="dispImg" src="./apprel.webp" alt="Gelişme görseli" decoding="async"
-                 onerror="this.src='https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=600&auto=format&fit=crop&q=80'"
+      <div class="mt-8 max-w-5xl mx-auto">
+        <div class="rounded-2xl overflow-hidden grid grid-cols-1 md:grid-cols-2 md:min-h-[460px] border border-line bg-surface">
+          <div class="relative h-56 sm:h-72 md:h-auto bg-secondary-soft/40">
+            <img id="dispImg" src="./apprel.webp" alt="Apprel'de AI/ML Engineer Intern" decoding="async"
                  class="fade-swap absolute inset-0 h-full w-full object-contain object-center bg-white p-8 md:p-12" />
           </div>
-          <div class="p-7 md:p-9 flex flex-col justify-center">
-            <span id="dispTag" class="fade-swap font-mono text-xs text-accent tracking-wider">2026-10 · STAJ / YENİ GÖREV</span>
-            <h3 id="dispTitle" class="fade-swap font-display text-2xl md:text-3xl font-bold mt-3 leading-snug">
+          <div id="dispBody" class="p-6 md:p-9 flex flex-col justify-center" aria-live="polite">
+            <span id="dispTag" class="fade-swap font-mono text-xs text-accent-text tracking-wider">2026-10 · STAJ / YENİ GÖREV</span>
+            <h3 id="dispTitle" class="fade-swap font-display text-2xl md:text-3xl font-semibold mt-3 leading-snug">
               Apprel'de AI/ML Engineer Intern
             </h3>
-            <p id="dispDesc" class="fade-swap mt-3 text-slate-600 dark:text-slate-400 leading-relaxed">
+            <p id="dispDesc" class="fade-swap mt-3 text-muted leading-[1.7]">
               Lüksemburg merkezli yapay zeka destekli moda ve kişisel stil girişimi Apprel'de AI/ML
               Engineer Intern olarak yeni bir göreve başladım.
             </p>
           </div>
         </div>
 
-        <div class="mt-5 flex flex-wrap gap-2.5" id="dispNav">
-          <button data-go="0" class="disp-btn font-mono text-sm px-3.5 py-2 rounded-lg border transition-colors border-slate-300 dark:border-slate-800">[ 01 ]</button>
-          <button data-go="1" class="disp-btn font-mono text-sm px-3.5 py-2 rounded-lg border transition-colors border-slate-300 dark:border-slate-800">[ 02 ]</button>
-          <button data-go="2" class="disp-btn font-mono text-sm px-3.5 py-2 rounded-lg border transition-colors border-slate-300 dark:border-slate-800">[ 03 ]</button>
-          <button data-go="3" class="disp-btn font-mono text-sm px-3.5 py-2 rounded-lg border transition-colors border-slate-300 dark:border-slate-800">[ 04 ]</button>
-          <button data-go="4" class="disp-btn font-mono text-sm px-3.5 py-2 rounded-lg border transition-colors border-slate-300 dark:border-slate-800">[ 05 ]</button>
-          <button data-go="5" class="disp-btn font-mono text-sm px-3.5 py-2 rounded-lg border transition-colors border-slate-300 dark:border-slate-800">[ 06 ]</button>
-          <button data-go="6" class="disp-btn font-mono text-sm px-3.5 py-2 rounded-lg border transition-colors border-slate-300 dark:border-slate-800">[ 07 ]</button>
-          <button data-go="7" class="disp-btn font-mono text-sm px-3.5 py-2 rounded-lg border transition-colors border-slate-300 dark:border-slate-800">[ 08 ]</button>
-          <button data-go="8" class="disp-btn font-mono text-sm px-3.5 py-2 rounded-lg border transition-colors border-slate-300 dark:border-slate-800">[ 09 ]</button>
-          <button data-go="9" class="disp-btn font-mono text-sm px-3.5 py-2 rounded-lg border transition-colors border-slate-300 dark:border-slate-800">[ 10 ]</button>
-          <button data-go="10" class="disp-btn font-mono text-sm px-3.5 py-2 rounded-lg border transition-colors border-slate-300 dark:border-slate-800">[ 11 ]</button>
-          <button data-go="11" class="disp-btn font-mono text-sm px-3.5 py-2 rounded-lg border transition-colors border-slate-300 dark:border-slate-800">[ 12 ]</button>
+        <div class="mt-5 flex flex-wrap gap-2" id="dispNav" role="group" aria-label="Gelişmeler" data-en-aria="Updates">
+          <button type="button" data-go="0" class="disp-btn font-mono text-sm min-h-11 px-3.5 py-2 rounded-lg border border-line text-muted hover:text-ink hover:border-line-strong aria-[current=true]:bg-accent-soft aria-[current=true]:border-line-strong aria-[current=true]:text-accent-text transition-colors cursor-pointer">[ 01 ]</button>
+          <button type="button" data-go="1" class="disp-btn font-mono text-sm min-h-11 px-3.5 py-2 rounded-lg border border-line text-muted hover:text-ink hover:border-line-strong aria-[current=true]:bg-accent-soft aria-[current=true]:border-line-strong aria-[current=true]:text-accent-text transition-colors cursor-pointer">[ 02 ]</button>
+          <button type="button" data-go="2" class="disp-btn font-mono text-sm min-h-11 px-3.5 py-2 rounded-lg border border-line text-muted hover:text-ink hover:border-line-strong aria-[current=true]:bg-accent-soft aria-[current=true]:border-line-strong aria-[current=true]:text-accent-text transition-colors cursor-pointer">[ 03 ]</button>
+          <button type="button" data-go="3" class="disp-btn font-mono text-sm min-h-11 px-3.5 py-2 rounded-lg border border-line text-muted hover:text-ink hover:border-line-strong aria-[current=true]:bg-accent-soft aria-[current=true]:border-line-strong aria-[current=true]:text-accent-text transition-colors cursor-pointer">[ 04 ]</button>
+          <button type="button" data-go="4" class="disp-btn font-mono text-sm min-h-11 px-3.5 py-2 rounded-lg border border-line text-muted hover:text-ink hover:border-line-strong aria-[current=true]:bg-accent-soft aria-[current=true]:border-line-strong aria-[current=true]:text-accent-text transition-colors cursor-pointer">[ 05 ]</button>
+          <button type="button" data-go="5" class="disp-btn font-mono text-sm min-h-11 px-3.5 py-2 rounded-lg border border-line text-muted hover:text-ink hover:border-line-strong aria-[current=true]:bg-accent-soft aria-[current=true]:border-line-strong aria-[current=true]:text-accent-text transition-colors cursor-pointer">[ 06 ]</button>
+          <button type="button" data-go="6" class="disp-btn font-mono text-sm min-h-11 px-3.5 py-2 rounded-lg border border-line text-muted hover:text-ink hover:border-line-strong aria-[current=true]:bg-accent-soft aria-[current=true]:border-line-strong aria-[current=true]:text-accent-text transition-colors cursor-pointer">[ 07 ]</button>
+          <button type="button" data-go="7" class="disp-btn font-mono text-sm min-h-11 px-3.5 py-2 rounded-lg border border-line text-muted hover:text-ink hover:border-line-strong aria-[current=true]:bg-accent-soft aria-[current=true]:border-line-strong aria-[current=true]:text-accent-text transition-colors cursor-pointer">[ 08 ]</button>
+          <button type="button" data-go="8" class="disp-btn font-mono text-sm min-h-11 px-3.5 py-2 rounded-lg border border-line text-muted hover:text-ink hover:border-line-strong aria-[current=true]:bg-accent-soft aria-[current=true]:border-line-strong aria-[current=true]:text-accent-text transition-colors cursor-pointer">[ 09 ]</button>
+          <button type="button" data-go="9" class="disp-btn font-mono text-sm min-h-11 px-3.5 py-2 rounded-lg border border-line text-muted hover:text-ink hover:border-line-strong aria-[current=true]:bg-accent-soft aria-[current=true]:border-line-strong aria-[current=true]:text-accent-text transition-colors cursor-pointer">[ 10 ]</button>
+          <button type="button" data-go="10" class="disp-btn font-mono text-sm min-h-11 px-3.5 py-2 rounded-lg border border-line text-muted hover:text-ink hover:border-line-strong aria-[current=true]:bg-accent-soft aria-[current=true]:border-line-strong aria-[current=true]:text-accent-text transition-colors cursor-pointer">[ 11 ]</button>
+          <button type="button" data-go="11" class="disp-btn font-mono text-sm min-h-11 px-3.5 py-2 rounded-lg border border-line text-muted hover:text-ink hover:border-line-strong aria-[current=true]:bg-accent-soft aria-[current=true]:border-line-strong aria-[current=true]:text-accent-text transition-colors cursor-pointer">[ 12 ]</button>
         </div>
       </div>
     </section>
@@ -1574,28 +1572,27 @@
       });
     })();
 
-    // ---- Gelişmeler vitrini (10 sekme, sabit yükseklik) ----
+    // ---- Gelişmeler vitrini (12 sekme, sadece tıklayınca geçer — otomatik geçiş yok) ----
     (function () {
-      var FALLBACK = 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=600&auto=format&fit=crop&q=80';
       var data = [
         { img: './apprel.webp', fit: 'contain', tag: '2026-10 · STAJ / YENİ GÖREV', tag_en: '2026-10 · INTERNSHIP / NEW ROLE', title: "Apprel'de AI/ML Engineer Intern", title_en: 'AI/ML Engineer Intern at Apprel', desc: "Lüksemburg merkezli yapay zeka destekli moda ve kişisel stil girişimi Apprel'de AI/ML Engineer Intern olarak yeni bir göreve başladım. Bu süreçte yapay zeka geliştirme süreçlerinde yer alacak, yeni teknolojileri uygulamalı olarak deneyimleme ve kendimi geliştirme fırsatı bulacağım. Bu harika fırsat için Apprel ekibine teşekkür ederim!", desc_en: "I started a new position as an AI/ML Engineer Intern at Apprel, a Luxembourg-based startup building an AI-powered fashion and personal styling app. I'm excited to take part in AI development processes, work with new technologies and gain valuable hands-on experience alongside a great team. Thanks to the Apprel team for this opportunity!" },
         { img: './kapsul.webp',       tag: '2026-08 · YAZ OKULU',        tag_en: '2026-08 · SUMMER SCHOOL',   title: 'KAPSÜL Yaz Okulu', title_en: 'KAPSÜL Summer School', desc: "Savunma Sanayii Akademi'nin düzenlediği KAPSÜL Yaz Okulu'nu Cumhurbaşkanlığı Millet Kütüphanesi'nde başarıyla tamamlamanın gururunu yaşıyorum. Sektörün öncü isimlerinden savunma sanayimizin dinamiklerini ve stratejik vizyonunu dinlemek, bir bilgisayar mühendisi adayı olarak benim için oldukça ufuk açıcı bir deneyimdi. Milli teknolojilerimizi geliştirme yolunda bana kattığı bu değerli vizyon için Savunma Sanayii Başkanlığı'na ve emeği geçen tüm eğitmenlerimize teşekkür ederim.", desc_en: "I am proud to have successfully completed the KAPSÜL Summer School organized by the Defense Industry Academy at the Presidential Nation Library. Listening to the dynamics and strategic vision of our defense industry from leading experts in the sector was an eye-opening experience for me as a computer engineering candidate. I would like to thank the Presidency of Defense Industries and all our instructors for providing this valuable vision on the path to developing our national technologies." },
-        { img: './allstar.webp',     tag: '2026-07 · HACKATHON / FİNAL', tag_en: '2026-07 · HACKATHON / FINAL', title: 'Turkcell Code Night All-Star Finali', title_en: 'Turkcell Code Night All-Star Final', desc: "Turkcell Code Night'ın İzmir etabındaki 2.'lik derecemizin ardından, ekip arkadaşlarım Mehmet Ali Sevdinoğlu ve İskender Guliyev ile Turkcell Geleceği Yazanlar Code Night All-Star 2026 finalinde yer aldık. Türkiye'nin farklı şehirlerinde dereceye giren ekiplerin buluştuğu organizasyonda, kısıtlı sürede gerçek bir iş problemine çözüm üretmeye çalıştığımız uykusuz bir vaka maratonunu geride bıraktık; yeni teknik yaklaşımlar denediğimiz ve zaman kısıtı altında takım olarak çalıştığımız bu final, vizyonumuzu genişleten kıymetli bir deneyim oldu.", desc_en: "Following our 2nd place finish at the Turkcell Code Night İzmir stage, I had the opportunity to compete in the Code Night All-Star 2026 final alongside my teammates Mehmet Ali Sevdinoğlu and İskender Guliyev. Competing alongside top teams from across Turkey, trying to solve a real business problem in a limited time and completing a sleepless case marathon was a highly instructive process — a final where we tested new technical approaches and experienced teamwork under time constraints, broadening our vision." },
-        { img: './sertifika.webp',      tag: '2026-06 · SERTİFİKA / EĞİTİM', tag_en: '2026-06 · CERTIFICATE / COURSE', title: 'Veri Bilimi & Makine Öğrenmesi Kampı', title_en: 'Data Science & ML Bootcamp', desc: "Atıl Samancıoğlu'nun 61,5 saatlik Veri Bilimi & Makine Öğrenmesi kampını tamamladım (Python, istatistik, EDA, feature engineering, denetimli/denetimsiz öğrenme, XGBoost). Üstüne bitirme projemi geliştirdim: NASA C-MAPSS turbofan motorlarının kalan ömrünü tahmin eden, canlıya alınmış uçtan uca bir ML uygulaması.", desc_en: "I completed Atıl Samancıoğlu's 61.5-hour Data Science & Machine Learning bootcamp (Python, statistics, EDA, feature engineering, supervised/unsupervised learning, XGBoost). On top of it I built my capstone: a deployed end-to-end ML app predicting the Remaining Useful Life of NASA C-MAPSS turbofan engines." },
+        { img: './allstar.webp',     tag: '2026-07 · HACKATHON / FİNAL', tag_en: '2026-07 · HACKATHON / FINAL', title: 'Turkcell Code Night All-Star Finali', title_en: 'Turkcell Code Night All-Star Final', desc: "Turkcell Code Night'ın İzmir etabındaki 2.'lik derecemizin ardından, ekip arkadaşlarımla Turkcell Geleceği Yazanlar Code Night All-Star 2026 finalinde yer aldık. Türkiye'nin farklı şehirlerinde dereceye giren ekiplerin buluştuğu organizasyonda, kısıtlı sürede gerçek bir iş problemine çözüm üretmeye çalıştığımız uykusuz bir vaka maratonunu geride bıraktık; yeni teknik yaklaşımlar denediğimiz ve zaman kısıtı altında takım olarak çalıştığımız bu final, vizyonumuzu genişleten kıymetli bir deneyim oldu.", desc_en: "Following our 2nd place finish at the Turkcell Code Night İzmir stage, I had the opportunity to compete in the Code Night All-Star 2026 final alongside my teammates. Competing alongside top teams from across Turkey, trying to solve a real business problem in a limited time and completing a sleepless case marathon was a highly instructive process — a final where we tested new technical approaches and experienced teamwork under time constraints, broadening our vision." },
+        { img: './sertifika.webp',      tag: '2026-06 · SERTİFİKA / EĞİTİM', tag_en: '2026-06 · CERTIFICATE / COURSE', title: 'Veri Bilimi & Makine Öğrenmesi Kampı', title_en: 'Data Science & ML Bootcamp', desc: "61,5 saatlik Veri Bilimi & Makine Öğrenmesi kampını tamamladım (Python, istatistik, EDA, feature engineering, denetimli/denetimsiz öğrenme, XGBoost). Üstüne bitirme projemi geliştirdim: NASA C-MAPSS turbofan motorlarının kalan ömrünü tahmin eden, canlıya alınmış uçtan uca bir ML uygulaması.", desc_en: "I completed a 61.5-hour Data Science & Machine Learning bootcamp (Python, statistics, EDA, feature engineering, supervised/unsupervised learning, XGBoost). On top of it I built my capstone: a deployed end-to-end ML app predicting the Remaining Useful Life of NASA C-MAPSS turbofan engines." },
         { img: './roketsan.webp',       tag: '2026-05 · ZİRVE',             tag_en: '2026-05 · SUMMIT',           title: 'ROKETSAN Gençlik Buluşması',        title_en: 'ROKETSAN Youth Meetup',              desc: "19 Mayıs Atatürk'ü Anma, Gençlik ve Spor Bayramı coşkusunu ROKETSAN ev sahipliğinde düzenlenen zirvede, savunma sanayimizin kalbinde deneyimledim.", desc_en: "I experienced the spirit of the May 19th Commemoration of Atatürk, Youth and Sports Day at a summit hosted by ROKETSAN, in the heart of our defense industry." },
-        { img: './ıhlamur.webp',        tag: '2026-05 · ORGANİZASYON',      tag_en: '2026-05 · ORGANIZATION',     title: 'EBMT Söyleşi: Murat Ihlamur',       title_en: 'EBMT Talk: Murat Ihlamur',           desc: "Kurucu Bşk. Yrd. olduğum EBMT ev sahipliğinde Netsis kurucusu Murat Ihlamur ile yazılım girişimciliği ve startup ekosistemini masaya yatırdık.", desc_en: "Hosted by EBMT, where I am Founding Vice President, we explored software entrepreneurship and the startup ecosystem with Netsis founder Murat Ihlamur." },
-        { img: './söyleşi.webp',        tag: '2026-05 · ORGANİZASYON',      tag_en: '2026-05 · ORGANIZATION',     title: 'EBMT Söyleşi: Yapay Zeka & Toplum', title_en: 'EBMT Talk: AI & Society',             desc: "Prof. Dr. Oğuz Dikenelli ve Yük. Müh. İlker Kalaycı katılımıyla yapay zekanın toplumsal etkilerini incelediğimiz söyleşiyi koordine ettim.", desc_en: "I coordinated a talk examining the societal impacts of artificial intelligence, featuring Prof. Dr. Oğuz Dikenelli and M.Sc. Eng. İlker Kalaycı." },
+        { img: './ıhlamur.webp',        tag: '2026-05 · ORGANİZASYON',      tag_en: '2026-05 · ORGANIZATION',     title: 'EBMT Söyleşi: Yazılım Girişimciliği', title_en: 'EBMT Talk: Software Entrepreneurship',           desc: "Kurucu Bşk. Yrd. olduğum EBMT ev sahipliğinde Netsis'in kurucusuyla yazılım girişimciliği ve startup ekosistemini masaya yatırdık.", desc_en: "Hosted by EBMT, where I am Founding Vice President, we explored software entrepreneurship and the startup ecosystem with the founder of Netsis." },
+        { img: './söyleşi.webp',        tag: '2026-05 · ORGANİZASYON',      tag_en: '2026-05 · ORGANIZATION',     title: 'EBMT Söyleşi: Yapay Zeka & Toplum', title_en: 'EBMT Talk: AI & Society',             desc: "Yapay zekanın toplumsal etkilerini incelediğimiz söyleşiyi koordine ettim.", desc_en: "I coordinated a talk examining the societal impacts of artificial intelligence." },
         { img: './microsoft.webp',      tag: '2026-04 · STAJ / KABUL',      tag_en: '2026-04 · INTERNSHIP / OFFER', title: 'Microsoft AI Yaz Stajı Kabulü',   title_en: 'Microsoft AI Summer Internship Offer', desc: "Microsoft Türkiye bünyesinde gerçekleşecek olan Microsoft AI Innovators Summer Internship Programı'na seçilmeye hak kazandım.", desc_en: "I was selected for the Microsoft AI Innovators Summer Internship Program to be held at Microsoft Türkiye." },
         { img: './aspire.webp',         tag: '2026-03 · GLOBAL LİDERLİK',   tag_en: '2026-03 · GLOBAL LEADERSHIP', title: 'Aspire CAL Global Liderlik',       title_en: 'Aspire CAL Global Leadership',       desc: "Genç liderleri destekleyen küresel girişim Aspire Institute bünyesinde Campus Ambassador Leader - CAL olarak seçildim.", desc_en: "I was selected as a Campus Ambassador Leader (CAL) within Aspire Institute, a global initiative supporting young leaders." },
         { img: './anadolusigorta.webp', tag: '2026-02 · GENÇLİK SENATOSU',  tag_en: '2026-02 · YOUTH SENATE',      title: 'Anadolu Sigorta Young Vision',      title_en: 'Anadolu Sigorta Young Vision',       desc: "Anadolu Sigorta'nın gençlere özel gelişim programı Young Vision ile altı ay sürecek ilham dolu bir yolculuğa adım attım. Fikirlerimizi özgürce paylaştığımız, iş dünyasının trendlerini keşfettiğimiz ve köklü bir deneyimle geleceği bugünden şekillendirdiğimiz harika bir serüven.", desc_en: "I embarked on a six-month inspiring journey with Anadolu Sigorta's youth development program Young Vision — a wonderful adventure where we freely shared ideas, explored business-world trends and shaped the future today through a deep-rooted experience." },
         { img: './türkcell.webp',       tag: '2026-01 · HACKATHON',         tag_en: '2026-01 · HACKATHON',        title: 'Turkcell Code Night 2.liği',        title_en: 'Turkcell Code Night 2nd Place',      desc: "Gece boyu süren vaka maratonunda geliştirdiğimiz REST API tabanlı full-stack çözümle İzmir 2.si olarak All-Star İstanbul biletini kazandık.", desc_en: "With the REST API-based full-stack solution we built in the overnight case marathon, we finished 2nd in İzmir and earned an All-Star İstanbul ticket." },
-        { img: './tübitak.webp',        tag: '2026-01 · AR-GE / PROJE',     tag_en: '2026-01 · R&D / PROJECT',    title: 'TÜBİTAK STAR Araştırmacılığı',      title_en: 'TÜBİTAK STAR Researcher',            desc: "LimbuStem bünyesindeki TEYDEB projesinde Prof. Dr. Özlem Barut Selver ve Prof. Dr. Alper Selver danışmanlığında AI tabanlı kornea alıcı belirleme sisteminde görev aldım.", desc_en: "In the TEYDEB project at LimbuStem, I worked on an AI-based corneal recipient identification system under the supervision of Prof. Dr. Özlem Barut Selver and Prof. Dr. Alper Selver." }
+        { img: './tübitak.webp',        tag: '2026-01 · AR-GE / PROJE',     tag_en: '2026-01 · R&D / PROJECT',    title: 'TÜBİTAK STAR Araştırmacılığı',      title_en: 'TÜBİTAK STAR Researcher',            desc: "TÜBİTAK 2247-C STAR programı kapsamında AI tabanlı kornea alıcı belirleme sisteminde görev aldım.", desc_en: "Within the TÜBİTAK 2247-C STAR program, I worked on an AI-based corneal recipient identification system." }
       ];
 
       var img = document.getElementById('dispImg'), tag = document.getElementById('dispTag'),
           title = document.getElementById('dispTitle'), desc = document.getElementById('dispDesc'),
           btns = document.querySelectorAll('.disp-btn');
-      var current = 0, timer;
+      var current = 0;
       // Logo gibi geniş görseller kırpılmasın: fit:'contain' olan slaytta beyaz zemin + contain
       var FIT_CONTAIN = ['object-contain', 'bg-white', 'p-8', 'md:p-12'];
       function applyFit(d) {
@@ -1606,37 +1603,57 @@
 
       function setBtn(i) {
         btns.forEach(function (b, idx) {
-          b.classList.toggle('bg-steeldeep', idx === i);
-          b.classList.toggle('text-white', idx === i);
-          b.classList.toggle('border-steeldeep', idx === i);
+          if (idx === i) b.setAttribute('aria-current', 'true'); else b.removeAttribute('aria-current');
+        });
+      }
+      // Numara butonlarına anlamlı etiket: "Gelişme 1: Apprel'de AI/ML Engineer Intern"
+      function labelButtons() {
+        var en = (window.SITE_LANG === 'en');
+        btns.forEach(function (b, idx) {
+          var d = data[idx]; if (!d) return;
+          b.setAttribute('aria-label', t('dispItem', { n: idx + 1, t: en ? d.title_en : d.title }));
         });
       }
       function go(i) {
         current = i;
         var d = data[i];
         var en = (window.SITE_LANG === 'en');
-        [img, tag, title, desc].forEach(function (el) { el.style.opacity = '0'; });
-        setTimeout(function () {
-          img.onerror = function () { this.onerror = null; this.src = FALLBACK; };
+        function render() {
+          img.style.visibility = '';
+          img.onerror = function () { this.onerror = null; this.style.visibility = 'hidden'; };
           applyFit(d);
           img.src = d.img;
+          img.alt = en ? d.title_en : d.title;
           tag.textContent = en ? d.tag_en : d.tag;
           title.textContent = en ? d.title_en : d.title;
           desc.textContent = en ? d.desc_en : d.desc;
+        }
+        if (REDUCED) { render(); setBtn(i); return; }
+        [img, tag, title, desc].forEach(function (el) { el.style.opacity = '0'; });
+        setTimeout(function () {
+          render();
           [img, tag, title, desc].forEach(function (el) { el.style.opacity = '1'; });
         }, 200);
         setBtn(i);
       }
       btns.forEach(function (b) {
-        b.addEventListener('click', function () { go(parseInt(b.getAttribute('data-go'), 10)); restart(); });
+        b.addEventListener('click', function () { go(parseInt(b.getAttribute('data-go'), 10)); });
+        // Klavye: ← / → ile önceki / sonraki gelişme
+        b.addEventListener('keydown', function (e) {
+          if (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft') return;
+          e.preventDefault();
+          var n = (current + (e.key === 'ArrowRight' ? 1 : -1) + data.length) % data.length;
+          go(n); btns[n].focus();
+        });
       });
-      function restart() { clearInterval(timer); timer = setInterval(function () { go((current + 1) % data.length); }, 6000); }
       // Dil değişince mevcut slaytı anında yeniden çiz
       window.__refreshDispatch = function () {
         var d = data[current], en = (window.SITE_LANG === 'en');
         tag.textContent = en ? d.tag_en : d.tag;
         title.textContent = en ? d.title_en : d.title;
         desc.textContent = en ? d.desc_en : d.desc;
+        img.alt = en ? d.title_en : d.title;
+        labelButtons();
       };
       // Slayt görsellerini tarayıcı boştayken önden yükle → geçişlerde bekleme olmasın
       function preloadSlides() {
@@ -1645,7 +1662,7 @@
       if (window.requestIdleCallback) requestIdleCallback(preloadSlides, { timeout: 3000 });
       else setTimeout(preloadSlides, 1500);
 
-      setBtn(0); restart();
+      setBtn(0); labelButtons();
       window.__onLang.push(window.__refreshDispatch);
     })();
 
