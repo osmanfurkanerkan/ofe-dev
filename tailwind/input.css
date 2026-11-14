@@ -1,3 +1,43 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Renk tokenları — kaynak: DESIGN_SYSTEM.md §2.1 / §2.4
+   Değerler "R G B" biçiminde; Tailwind'de /80 gibi opaklık eklenebilsin diye. */
+@layer base {
+  :root {
+    --c-bg: 245 244 240;             /* #F5F4F0 */
+    --c-surface: 255 255 255;        /* #FFFFFF */
+    --c-surface-2: 236 238 234;      /* #ECEEEA */
+    --c-text: 18 44 52;              /* #122C34 */
+    --c-text-muted: 78 100 104;      /* #4E6468 */
+    --c-border: 213 218 214;         /* #D5DAD6 */
+    --c-border-strong: 88 139 139;   /* #588B8B */
+    --c-accent: 88 139 139;          /* #588B8B */
+    --c-accent-text: 63 111 111;     /* #3F6F6F */
+    --c-accent-fill: 63 111 111;     /* #3F6F6F */
+    --c-on-accent: 255 255 255;      /* #FFFFFF */
+    --c-accent-soft: 227 236 234;    /* #E3ECEA */
+    --c-secondary: 166 128 140;      /* #A6808C */
+    --c-secondary-text: 126 90 102;  /* #7E5A66 */
+    --c-secondary-soft: 235 186 185; /* #EBBAB9 */
+    --c-highlight: 208 255 214;      /* #D0FFD6 */
+    --c-focus: 63 111 111;           /* #3F6F6F */
+    --c-danger: 180 35 24;           /* #B42318 */
+  }
+  .dark {
+    --c-bg: 13 31 37;                /* #0D1F25 */
+    --c-surface: 18 44 52;           /* #122C34 */
+    --c-surface-2: 24 54 63;         /* #18363F */
+    --c-text: 245 244 240;           /* #F5F4F0 */
+    --c-text-muted: 169 184 184;     /* #A9B8B8 */
+    --c-border: 34 68 77;            /* #22444D */
+    --c-accent-text: 127 179 179;    /* #7FB3B3 */
+    --c-accent-fill: 127 179 179;    /* #7FB3B3 */
+    --c-on-accent: 13 31 37;         /* #0D1F25 */
+    --c-accent-soft: 22 50 58;       /* #16323A */
+    --c-secondary-text: 235 186 185; /* #EBBAB9 */
+    --c-focus: 208 255 214;          /* #D0FFD6 */
+    --c-danger: 249 112 102;         /* #F97066 */
+  }
+}
