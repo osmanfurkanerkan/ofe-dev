@@ -59,28 +59,28 @@
   <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[200] focus:rounded-xl focus:bg-surface focus:px-4 focus:py-3 focus:text-sm focus:font-semibold focus:text-ink focus:border focus:border-line-strong" data-en="Skip to content">İçeriğe geç</a>
 
   <!-- ================= NAVBAR (Dynamic Island) ================= -->
-  <header class="fixed top-4 left-1/2 -translate-x-1/2 w-[96%] max-w-5xl z-50 transition-all duration-300">
-    <nav class="flex items-center justify-between px-4 py-2 rounded-full backdrop-blur-2xl bg-[#0A0D12]/85 border border-white/[0.08] shadow-[0_10px_35px_rgba(0,0,0,0.6)]">
+  <header id="siteHeader" class="fixed top-4 left-1/2 -translate-x-1/2 w-[96%] max-w-5xl z-50">
+    <nav aria-label="Ana menü" data-en-aria="Main menu" class="flex items-center justify-between gap-2 pl-4 pr-2 py-2 rounded-full backdrop-blur bg-surface/85 border border-line shadow-[0_1px_2px_rgb(18_44_52/0.06),0_8px_24px_-12px_rgb(18_44_52/0.18)]">
 
-      <!-- LOGO: Monospace Cyber Badge -->
-      <a href="#hero" class="flex items-center gap-1.5 group pl-1">
-        <span class="font-mono font-bold tracking-tight text-white text-base group-hover:text-sky-400 transition-colors">OFE</span>
-        <span class="text-[10px] font-mono px-2 py-0.5 rounded-full bg-sky-500/10 text-sky-400 border border-sky-500/20 group-hover:border-sky-400/40 transition-all">.dev</span>
+      <!-- LOGO -->
+      <a href="#hero" class="flex items-center gap-1.5 shrink-0 rounded-full" aria-label="OFE .dev — Sayfanın başına dön" data-en-aria="OFE .dev — Back to top">
+        <span class="font-mono font-medium tracking-tight text-ink text-base">OFE</span>
+        <span class="text-xs font-mono px-2 py-0.5 rounded-full bg-accent-soft text-accent-text">.dev</span>
       </a>
 
-      <!-- MERKEZ LİNKLER: Kapsül içi Kapsül (Sub-Pill) -->
-      <div class="hidden md:flex items-center gap-0.5 bg-white/[0.02] p-1 rounded-full border border-white/[0.04]">
-        <a href="#about" data-en="About" class="px-3 py-1 rounded-full text-xs font-mono text-slate-300 hover:text-white hover:bg-white/10 transition-all">Hakkımda</a>
-        <a href="#skills" data-en="Skills" class="px-3 py-1 rounded-full text-xs font-mono text-slate-300 hover:text-white hover:bg-white/10 transition-all">Beceriler</a>
-        <a href="#dispatch" data-en="Updates" class="px-3 py-1 rounded-full text-xs font-mono text-slate-300 hover:text-white hover:bg-white/10 transition-all">Gelişmeler</a>
-        <a href="#experience" data-en="Experience" class="px-3 py-1 rounded-full text-xs font-mono text-slate-300 hover:text-white hover:bg-white/10 transition-all">Deneyim</a>
-        <a href="#certificates" data-en="Honors" class="px-3 py-1 rounded-full text-xs font-mono text-slate-300 hover:text-white hover:bg-white/10 transition-all">Sertifikalar</a>
-        <a href="#education" data-en="Education" class="px-3 py-1 rounded-full text-xs font-mono text-slate-300 hover:text-white hover:bg-white/10 transition-all">Eğitim</a>
-        <a href="#projects" data-en="Projects" class="px-3 py-1 rounded-full text-xs font-mono text-slate-300 hover:text-white hover:bg-white/10 transition-all">Projeler</a>
+      <!-- MERKEZ LİNKLER (masaüstü) -->
+      <div class="hidden md:flex items-center gap-0.5">
+        <a href="#about" data-en="About" class="nav-link px-3 py-1.5 rounded-full text-xs font-mono text-muted hover:text-ink hover:bg-surface-2 aria-[current=true]:bg-accent-soft aria-[current=true]:text-ink transition-colors">Hakkımda</a>
+        <a href="#skills" data-en="Skills" class="nav-link px-3 py-1.5 rounded-full text-xs font-mono text-muted hover:text-ink hover:bg-surface-2 aria-[current=true]:bg-accent-soft aria-[current=true]:text-ink transition-colors">Beceriler</a>
+        <a href="#dispatch" data-en="Updates" class="nav-link px-3 py-1.5 rounded-full text-xs font-mono text-muted hover:text-ink hover:bg-surface-2 aria-[current=true]:bg-accent-soft aria-[current=true]:text-ink transition-colors">Gelişmeler</a>
+        <a href="#experience" data-en="Experience" class="nav-link px-3 py-1.5 rounded-full text-xs font-mono text-muted hover:text-ink hover:bg-surface-2 aria-[current=true]:bg-accent-soft aria-[current=true]:text-ink transition-colors">Deneyim</a>
+        <a href="#certificates" data-en="Honors" class="nav-link px-3 py-1.5 rounded-full text-xs font-mono text-muted hover:text-ink hover:bg-surface-2 aria-[current=true]:bg-accent-soft aria-[current=true]:text-ink transition-colors">Sertifikalar</a>
+        <a href="#education" data-en="Education" class="nav-link px-3 py-1.5 rounded-full text-xs font-mono text-muted hover:text-ink hover:bg-surface-2 aria-[current=true]:bg-accent-soft aria-[current=true]:text-ink transition-colors">Eğitim</a>
+        <a href="#projects" data-en="Projects" class="nav-link px-3 py-1.5 rounded-full text-xs font-mono text-muted hover:text-ink hover:bg-surface-2 aria-[current=true]:bg-accent-soft aria-[current=true]:text-ink transition-colors">Projeler</a>
       </div>
 
-      <!-- SAĞ KONTROLLER & HOLLOW NEON CTA -->
-      <div class="flex items-center gap-2">
+      <!-- SAĞ KONTROLLER -->
+      <div class="flex items-center gap-1.5 sm:gap-2">
         <!-- Dil Switcher (Segmented Pill) -->
         <div role="group" aria-label="Dil seçimi" data-en-aria="Language" class="flex items-center bg-surface-2 border border-line p-0.5 rounded-full font-mono text-xs">
           <button type="button" id="lang-btn-tr" lang="tr" aria-pressed="true" class="min-w-9 px-2.5 py-1.5 rounded-full text-muted hover:text-ink aria-pressed:bg-surface aria-pressed:text-ink aria-pressed:font-medium transition-colors cursor-pointer">TR</button>
@@ -93,17 +93,31 @@
           <svg class="h-4 w-4 hidden dark:block" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
         </button>
 
-        <!-- Hollow Neon Pill Button -->
-        <a href="#contact" class="relative group inline-flex items-center justify-center p-[1px] rounded-full overflow-hidden font-mono text-xs">
-          <span class="absolute inset-0 bg-gradient-to-r from-sky-400 via-indigo-500 to-emerald-400 rounded-full transition-all duration-300 group-hover:scale-105"></span>
-          <span class="relative px-3.5 py-1.5 bg-[#0A0D12] rounded-full text-sky-300 group-hover:bg-transparent group-hover:text-white transition-all duration-300 flex items-center gap-1">
-            <span data-en="CONTACT_ME">BANA_ULAŞ</span>
-            <span class="text-emerald-400 font-bold font-sans">↗</span>
-          </span>
+        <!-- Bana ulaş (secondary küçük buton) -->
+        <a href="#contact" class="hidden sm:inline-flex items-center gap-1 rounded-full border border-line-strong px-3.5 py-1.5 text-xs font-medium text-ink hover:bg-accent-soft transition-colors">
+          <span data-en="Contact">Bana ulaş</span>
         </a>
-      </div>
 
+        <!-- Mobil menü butonu -->
+        <button type="button" id="menuToggle" aria-expanded="false" aria-controls="mobileMenu" aria-label="Menüyü aç" data-en-aria="Open menu" class="md:hidden h-9 w-9 grid place-items-center rounded-full border border-line text-ink hover:border-line-strong transition-colors cursor-pointer">
+          <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16"/><path d="M4 12h16"/><path d="M4 18h16"/></svg>
+        </button>
+      </div>
     </nav>
+
+    <!-- Mobil menü paneli -->
+    <div id="mobileMenu" class="hidden md:hidden mt-2 rounded-2xl bg-surface border border-line p-2 shadow-[0_1px_2px_rgb(18_44_52/0.06),0_8px_24px_-12px_rgb(18_44_52/0.18)]">
+      <ul class="flex flex-col">
+        <li><a href="#about" data-en="About" class="nav-link block rounded-xl px-4 py-3 font-mono text-sm text-muted hover:text-ink hover:bg-surface-2 aria-[current=true]:bg-accent-soft aria-[current=true]:text-ink transition-colors">Hakkımda</a></li>
+        <li><a href="#skills" data-en="Skills" class="nav-link block rounded-xl px-4 py-3 font-mono text-sm text-muted hover:text-ink hover:bg-surface-2 aria-[current=true]:bg-accent-soft aria-[current=true]:text-ink transition-colors">Beceriler</a></li>
+        <li><a href="#dispatch" data-en="Updates" class="nav-link block rounded-xl px-4 py-3 font-mono text-sm text-muted hover:text-ink hover:bg-surface-2 aria-[current=true]:bg-accent-soft aria-[current=true]:text-ink transition-colors">Gelişmeler</a></li>
+        <li><a href="#experience" data-en="Experience" class="nav-link block rounded-xl px-4 py-3 font-mono text-sm text-muted hover:text-ink hover:bg-surface-2 aria-[current=true]:bg-accent-soft aria-[current=true]:text-ink transition-colors">Deneyim</a></li>
+        <li><a href="#certificates" data-en="Honors" class="nav-link block rounded-xl px-4 py-3 font-mono text-sm text-muted hover:text-ink hover:bg-surface-2 aria-[current=true]:bg-accent-soft aria-[current=true]:text-ink transition-colors">Sertifikalar</a></li>
+        <li><a href="#education" data-en="Education" class="nav-link block rounded-xl px-4 py-3 font-mono text-sm text-muted hover:text-ink hover:bg-surface-2 aria-[current=true]:bg-accent-soft aria-[current=true]:text-ink transition-colors">Eğitim</a></li>
+        <li><a href="#projects" data-en="Projects" class="nav-link block rounded-xl px-4 py-3 font-mono text-sm text-muted hover:text-ink hover:bg-surface-2 aria-[current=true]:bg-accent-soft aria-[current=true]:text-ink transition-colors">Projeler</a></li>
+        <li class="p-2"><a href="#contact" class="flex items-center justify-center rounded-xl border border-line-strong px-4 py-3 text-sm font-medium text-ink hover:bg-accent-soft transition-colors"><span data-en="Contact">Bana ulaş</span></a></li>
+      </ul>
+    </div>
   </header>
 
   <main id="main" tabindex="-1" class="outline-none">
@@ -1520,6 +1534,46 @@
       try { if (localStorage.getItem('lang') === 'en') saved = 'en'; } catch (e) {}
       // Diğer bloklar (Gelişmeler, sertifikalar…) kendi dinleyicilerini ekledikten sonra uygula
       window.__applySavedLang = function () { apply(saved, true); };
+    })();
+
+    // ---- Mobil menü + aktif bölüm vurgusu (aria-current) ----
+    (function () {
+      var btn = document.getElementById('menuToggle');
+      var panel = document.getElementById('mobileMenu');
+      var header = document.getElementById('siteHeader');
+      if (btn && panel) {
+        function setOpen(open, focusBack) {
+          panel.classList.toggle('hidden', !open);
+          btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+          var tr = open ? 'Menüyü kapat' : 'Menüyü aç', en = open ? 'Close menu' : 'Open menu';
+          btn.setAttribute('data-tr-aria', tr); btn.setAttribute('data-en-aria', en);
+          btn.setAttribute('aria-label', window.SITE_LANG === 'en' ? en : tr);
+          if (!open && focusBack) btn.focus();
+        }
+        btn.addEventListener('click', function () { setOpen(panel.classList.contains('hidden')); });
+        panel.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', function () { setOpen(false); }); });
+        document.addEventListener('keydown', function (e) {
+          if (e.key === 'Escape' && !panel.classList.contains('hidden')) setOpen(false, true);
+        });
+        document.addEventListener('click', function (e) {
+          if (!panel.classList.contains('hidden') && header && !header.contains(e.target)) setOpen(false);
+        });
+      }
+
+      var links = document.querySelectorAll('.nav-link');
+      if (!('IntersectionObserver' in window) || !links.length) return;
+      function mark(id) {
+        links.forEach(function (a) {
+          if (a.getAttribute('href') === '#' + id) a.setAttribute('aria-current', 'true');
+          else a.removeAttribute('aria-current');
+        });
+      }
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (en) { if (en.isIntersecting) mark(en.target.id); });
+      }, { rootMargin: '-45% 0px -50% 0px' });
+      ['about', 'skills', 'dispatch', 'experience', 'certificates', 'education', 'projects', 'contact'].forEach(function (id) {
+        var el = document.getElementById(id); if (el) io.observe(el);
+      });
     })();
 
     // ---- Gelişmeler vitrini (10 sekme, sabit yükseklik) ----
