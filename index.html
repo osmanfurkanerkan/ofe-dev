@@ -1300,20 +1300,33 @@
   </main>
 
   <!-- ================= FLOATING QUICK-DOCK ================= -->
-  <div class="rgb-dock fixed bottom-6 left-1/2 -translate-x-1/2 z-50 flex items-center backdrop-blur-md bg-slate-950/90 shadow-2xl rounded-full px-5 py-2.5 text-slate-200">
-    <button type="button" class="btn-cv-preview text-xs font-mono tracking-wider hover:text-cyan-300 transition-colors flex items-center gap-1.5 cursor-pointer" data-en="👁️ CV_PREVIEW">👁️ CV_ÖNİZLE</button>
-    <span class="mx-3 h-4 w-px bg-slate-600/50"></span>
-    <a href="./OsmanFurkanErkan_tr.pdf?v=2026-10-20" target="_blank" rel="noopener noreferrer" download class="js-cv flex items-center gap-1.5 text-xs font-mono tracking-wider hover:text-cyan-300 transition-colors" data-en="📄 CV_DOWNLOAD">📄 CV_INDIR</a>
-    <span class="mx-4 h-4 w-px bg-slate-600/50"></span>
-    <button id="dockMail" class="text-xs font-mono tracking-wider hover:text-cyan-300 transition-colors" data-en="✉️ EMAIL">✉️ E-POSTA</button>
-    <span class="mx-4 h-4 w-px bg-slate-600/50"></span>
-    <button id="dockThemeToggle" class="text-xs font-mono tracking-wider hover:text-cyan-300 transition-colors" data-en="🌓 MODE">🌓 MOD</button>
+  <div id="dock" class="fixed bottom-4 sm:bottom-6 left-1/2 -translate-x-1/2 z-50 flex items-center gap-0.5 sm:gap-1 rounded-full border border-line bg-surface/90 backdrop-blur px-1.5 py-1 text-muted shadow-[0_1px_2px_rgb(18_44_52/0.06),0_8px_24px_-12px_rgb(18_44_52/0.18)]">
+    <button type="button" class="btn-cv-preview inline-flex items-center justify-center gap-1.5 min-h-11 min-w-11 rounded-full px-3 font-mono text-xs tracking-wider hover:text-ink hover:bg-surface-2 transition-colors cursor-pointer">
+      <svg class="h-4 w-4 shrink-0" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+      <span class="sr-only sm:not-sr-only" data-en="CV_PREVIEW">CV_ÖNİZLE</span>
+    </button>
+    <span class="h-4 w-px bg-line" aria-hidden="true"></span>
+    <a href="./OsmanFurkanErkan_tr.pdf?v=2026-10-20" target="_blank" rel="noopener noreferrer" download class="js-cv inline-flex items-center justify-center gap-1.5 min-h-11 min-w-11 rounded-full px-3 font-mono text-xs tracking-wider hover:text-ink hover:bg-surface-2 transition-colors cursor-pointer">
+      <svg class="h-4 w-4 shrink-0" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="M7 10l5 5 5-5"/><path d="M12 15V3"/></svg>
+      <span class="sr-only sm:not-sr-only" data-en="CV_DOWNLOAD">CV_İNDİR</span>
+    </a>
+    <span class="h-4 w-px bg-line" aria-hidden="true"></span>
+    <button type="button" id="dockMail" class="inline-flex items-center justify-center gap-1.5 min-h-11 min-w-11 rounded-full px-3 font-mono text-xs tracking-wider hover:text-ink hover:bg-surface-2 transition-colors cursor-pointer">
+      <svg class="h-4 w-4 shrink-0" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
+      <span id="dockMailLabel" class="sr-only sm:not-sr-only" data-en="EMAIL">E-POSTA</span>
+    </button>
+    <span class="h-4 w-px bg-line" aria-hidden="true"></span>
+    <button type="button" id="dockThemeToggle" aria-pressed="false" aria-label="Temayı değiştir" data-en-aria="Toggle theme" class="inline-flex items-center justify-center gap-1.5 min-h-11 min-w-11 rounded-full px-3 font-mono text-xs tracking-wider hover:text-ink hover:bg-surface-2 transition-colors cursor-pointer">
+      <svg class="h-4 w-4 shrink-0" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 1 0 18Z" fill="currentColor"/></svg>
+      <span class="sr-only sm:not-sr-only" data-en="MODE">MOD</span>
+    </button>
   </div>
+  <p id="dockLive" class="sr-only" aria-live="polite"></p>
 
   <!-- ================= FOOTER (tek satır) ================= -->
-  <footer class="bg-[#F5F4F0] dark:bg-[#0C0F14] text-slate-900 dark:text-white border-t border-slate-300 dark:border-slate-800">
+  <footer class="bg-bg text-muted border-t border-line">
     <div class="mx-auto max-w-6xl px-4 sm:px-6 pt-7 pb-28 text-center">
-      <p class="text-xs text-slate-500 font-mono tracking-wider">© 2026 — Osman Furkan Erkan · İzmir, Türkiye</p>
+      <p class="text-xs font-mono tracking-wider" data-en="© 2026 — Osman Furkan Erkan · İzmir, Turkey">© 2026 — Osman Furkan Erkan · İzmir, Türkiye</p>
     </div>
   </footer>
 
@@ -1370,16 +1383,25 @@
 
       var a = document.getElementById('contactMail');
       if (a) a.setAttribute('href', 'mailto:' + mail);
-      var t = document.getElementById('contactMailText');
-      if (t) t.textContent = mail;
+      var mt = document.getElementById('contactMailText');
+      if (mt) mt.textContent = mail;
 
       var dm = document.getElementById('dockMail');
-      if (dm) {
+      var dmLabel = document.getElementById('dockMailLabel');
+      var live = document.getElementById('dockLive');
+      if (dm && dmLabel) {
+        var timer = null;
         dm.addEventListener('click', function () {
           try { navigator.clipboard.writeText(mail); } catch (e) {}
-          var prev = dm.textContent;
-          dm.textContent = 'KOPYALANDI ✓';
-          setTimeout(function () { dm.textContent = prev; }, 2000);
+          clearTimeout(timer);
+          dmLabel.textContent = t('copied');
+          dmLabel.classList.remove('sr-only');          // mobilde de görünsün
+          if (live) live.textContent = t('copiedSr');
+          timer = setTimeout(function () {
+            dmLabel.textContent = (window.SITE_LANG === 'en') ? dmLabel.getAttribute('data-en') : dmLabel.getAttribute('data-tr');
+            dmLabel.classList.add('sr-only');
+            if (live) live.textContent = '';
+          }, 2000);
         });
       }
     })();
@@ -1913,55 +1935,70 @@
     })();
   </script>
 
-  <!-- ================= CV LIVE PREVIEW MODAL ================= -->
-  <div id="cvModal" class="fixed inset-0 z-[100] hidden items-center justify-center p-3 sm:p-6 bg-slate-950/85 backdrop-blur-md transition-all duration-300">
-    <div class="relative w-full max-w-5xl h-[88vh] bg-[#0C0F14] border border-sky-500/30 rounded-2xl shadow-[0_0_50px_rgba(56,189,248,0.25)] flex flex-col overflow-hidden animate-[fadeIn_0.25s_ease-out]">
-      <!-- Modal Header -->
-      <div class="flex items-center justify-between px-5 py-3.5 border-b border-white/10 bg-[#0A0D12]">
-        <div class="flex items-center gap-3">
-          <div class="h-3 w-3 rounded-full bg-sky-400 animate-pulse"></div>
-          <span class="font-mono text-sm font-bold text-white tracking-wide" id="cvModalTitle" data-en="📄 Osman_Furkan_Erkan_CV.pdf">📄 Osman_Furkan_Erkan_CV.pdf</span>
+  <!-- ================= CV / SERTİFİKA ÖNİZLEME MODAL'I ================= -->
+  <div id="cvModal" class="fixed inset-0 z-[100] hidden items-center justify-center p-3 sm:p-6 bg-[#0D1F25]/70 backdrop-blur-sm">
+    <div id="cvModalPanel" role="dialog" aria-modal="true" aria-labelledby="cvModalTitle" class="relative w-full max-w-5xl h-[88vh] bg-surface border border-line rounded-2xl shadow-[0_1px_2px_rgb(18_44_52/0.06),0_8px_24px_-12px_rgb(18_44_52/0.18)] flex flex-col overflow-hidden animate-fade-in">
+      <!-- Başlık çubuğu -->
+      <div class="flex items-center justify-between gap-3 px-4 sm:px-5 py-2.5 border-b border-line bg-surface-2">
+        <div class="flex items-center gap-2.5 min-w-0">
+          <svg class="h-4 w-4 shrink-0 text-accent" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><path d="M14 2v6h6"/><path d="M16 13H8"/><path d="M16 17H8"/></svg>
+          <h2 class="font-mono text-sm font-medium text-ink truncate" id="cvModalTitle">Osman_Furkan_Erkan_CV_tr.pdf</h2>
         </div>
-        <div class="flex items-center gap-3">
-          <a id="cvModalDownloadBtn" href="./OsmanFurkanErkan_tr.pdf?v=2026-10-20" download class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-mono font-medium bg-sky-500/20 text-sky-300 border border-sky-500/30 hover:bg-sky-500/30 transition-all">
-            <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="M7 10l5 5 5-5"/><path d="M12 15V3"/></svg>
+        <div class="flex items-center gap-2 shrink-0">
+          <a id="cvModalDownloadBtn" href="./OsmanFurkanErkan_tr.pdf?v=2026-10-20" download class="inline-flex items-center gap-1.5 min-h-11 px-3.5 rounded-xl text-xs font-medium border border-line-strong text-ink hover:bg-accent-soft transition-colors">
+            <svg class="h-3.5 w-3.5" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="M7 10l5 5 5-5"/><path d="M12 15V3"/></svg>
             <span data-en="Download">İndir</span>
           </a>
-          <button id="closeCvModal" type="button" aria-label="Kapat" class="h-8 w-8 grid place-items-center rounded-full bg-white/10 text-slate-300 hover:text-white hover:bg-white/20 transition-all cursor-pointer">
-            <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+          <button id="closeCvModal" type="button" aria-label="Kapat" data-en-aria="Close" class="h-11 w-11 grid place-items-center rounded-xl border border-line text-muted hover:text-ink hover:border-line-strong transition-colors cursor-pointer">
+            <svg class="h-4 w-4" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
           </button>
         </div>
       </div>
-      <!-- Modal Body (Iframe) -->
-      <div class="relative flex-1 bg-slate-900 overflow-hidden">
-        <iframe id="cvModalIframe" src="about:blank" class="w-full h-full border-none"></iframe>
+      <!-- İçerik: PDF iframe'de, PNG <img> ile -->
+      <div class="relative flex-1 bg-surface-2 overflow-hidden">
+        <iframe id="cvModalIframe" src="about:blank" title="CV önizleme" tabindex="-1" class="w-full h-full border-none"></iframe>
+        <img id="cvModalImg" alt="" class="hidden absolute inset-0 m-auto max-w-full max-h-full object-contain p-4" />
       </div>
     </div>
   </div>
 
   <script>
-    // ---- CV Live Preview Modal Handler ----
+    // ---- CV / sertifika önizleme modal'ı (role=dialog, focus trap, focus geri dönüşü) ----
     (function () {
       var modal = document.getElementById('cvModal');
+      var panel = document.getElementById('cvModalPanel');
       var iframe = document.getElementById('cvModalIframe');
+      var imgEl = document.getElementById('cvModalImg');
       var dlBtn = document.getElementById('cvModalDownloadBtn');
       var closeBtn = document.getElementById('closeCvModal');
       var title = document.getElementById('cvModalTitle');
       if (!modal || !iframe) return;
+      var opener = null;
 
       function openModal(e) {
         var lang = window.SITE_LANG || 'tr';
         var btn = e ? e.currentTarget : null;
+        opener = btn || document.activeElement;
         var certSrc = btn ? btn.getAttribute('data-cert-src') : null;
         var certTitle = btn ? btn.getAttribute('data-cert-title') : null;
 
-        var pdf = certSrc || ((lang === 'en') ? './OsmanFurkanErkan_eng.pdf?v=2026-10-20' : './OsmanFurkanErkan_tr.pdf?v=2026-10-20');
-        iframe.src = pdf;
-        if (dlBtn) dlBtn.href = pdf;
-        if (title) title.textContent = certTitle ? ('📜 ' + certTitle) : ((lang === 'en') ? '📄 Osman_Furkan_Erkan_CV_eng.pdf' : '📄 Osman_Furkan_Erkan_CV_tr.pdf');
+        var src = certSrc || ((lang === 'en') ? './OsmanFurkanErkan_eng.pdf?v=2026-10-20' : './OsmanFurkanErkan_tr.pdf?v=2026-10-20');
+        var label = certTitle || t('cvTitle');
+        var isImg = /\.(png|jpe?g|webp)(\?|$)/i.test(src);
+        if (isImg) {
+          iframe.classList.add('hidden'); iframe.src = 'about:blank';
+          imgEl.src = src; imgEl.alt = label; imgEl.classList.remove('hidden');
+        } else {
+          imgEl.classList.add('hidden'); imgEl.removeAttribute('src');
+          iframe.classList.remove('hidden'); iframe.src = src;
+          iframe.title = certTitle || t('cvFrame');
+        }
+        if (dlBtn) dlBtn.href = src;
+        if (title) title.textContent = label;
         modal.classList.remove('hidden');
         modal.classList.add('flex');
         document.body.style.overflow = 'hidden';
+        closeBtn.focus();
       }
 
       function closeModal() {
@@ -1969,6 +2006,8 @@
         modal.classList.remove('flex');
         document.body.style.overflow = '';
         iframe.src = 'about:blank'; // kapalıyken PDF görüntüleyiciyi bellekte tutma
+        imgEl.removeAttribute('src');
+        if (opener && opener.focus) opener.focus();
       }
 
       document.querySelectorAll('.btn-cv-preview').forEach(function (btn) {
@@ -1979,8 +2018,17 @@
       modal.addEventListener('click', function (e) {
         if (e.target === modal) closeModal();
       });
-      window.addEventListener('keydown', function (e) {
-        if (e.key === 'Escape' && !modal.classList.contains('hidden')) closeModal();
+      document.addEventListener('keydown', function (e) {
+        if (modal.classList.contains('hidden')) return;
+        if (e.key === 'Escape') { closeModal(); return; }
+        if (e.key !== 'Tab') return;
+        // Focus trap: Tab modal içinde döner
+        var f = [].filter.call(panel.querySelectorAll('a[href], button:not([disabled])'), function (el) { return el.offsetParent !== null; });
+        if (!f.length) return;
+        var first = f[0], last = f[f.length - 1];
+        if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+        else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+        else if (!panel.contains(document.activeElement)) { e.preventDefault(); first.focus(); }
       });
     })();
   </script>
