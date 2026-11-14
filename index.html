@@ -1022,198 +1022,199 @@
     <!-- ================= PROJELER ================= -->
     <section id="projects" class="py-14 md:py-20 border-t border-line" data-aos="fade-up">
       <p class="font-mono text-xs font-medium text-accent-text tracking-[0.14em] mb-3" data-en="// 07 — PROJECTS">// 07 — PROJELER</p>
-      <h2 class="font-display text-3xl font-bold mb-6" data-en="Selected Work">Seçili Çalışmalar</h2>
+      <h2 class="font-display text-3xl sm:text-4xl font-semibold mb-8" data-en="Selected Work">Seçili Çalışmalar</h2>
 
       <!-- Dinamik filtreleme kapsülleri -->
-      <div class="mb-8 flex flex-wrap gap-2.5" id="projectFilters">
-        <button id="filter-all" data-filter="all" class="proj-filter font-mono text-xs px-4 py-2 rounded-full border backdrop-blur-md transition-all duration-300 bg-sky-500/15 border-sky-400/60 text-sky-600 dark:text-sky-300 shadow-[0_0_18px_-4px_rgba(56,189,248,0.6)]" data-en="[ All ]">[ Tümü ]</button>
-        <button id="filter-ai-vision" data-filter="ai-vision" class="proj-filter font-mono text-xs px-4 py-2 rounded-full border backdrop-blur-md transition-all duration-300 bg-white/60 dark:bg-white/[0.03] border-slate-300 dark:border-slate-700 text-slate-600 dark:text-slate-400 hover:border-sky-400/50 hover:text-sky-500">[ AI &amp; Vision ]</button>
-        <button id="filter-java-spring" data-filter="java-spring" class="proj-filter font-mono text-xs px-4 py-2 rounded-full border backdrop-blur-md transition-all duration-300 bg-white/60 dark:bg-white/[0.03] border-slate-300 dark:border-slate-700 text-slate-600 dark:text-slate-400 hover:border-sky-400/50 hover:text-sky-500">[ Java / Spring ]</button>
-        <button id="filter-python" data-filter="python" class="proj-filter font-mono text-xs px-4 py-2 rounded-full border backdrop-blur-md transition-all duration-300 bg-white/60 dark:bg-white/[0.03] border-slate-300 dark:border-slate-700 text-slate-600 dark:text-slate-400 hover:border-sky-400/50 hover:text-sky-500">[ Python ]</button>
+      <div class="mb-8 flex flex-wrap gap-2.5" id="projectFilters" role="group" aria-label="Proje filtreleri" data-en-aria="Project filters">
+        <button type="button" id="filter-all" data-filter="all" aria-pressed="true" class="proj-filter font-mono text-xs min-h-11 px-4 py-2 rounded-full border border-line text-muted hover:border-line-strong hover:text-ink aria-pressed:border-line-strong aria-pressed:bg-accent-soft aria-pressed:text-accent-text transition-colors cursor-pointer" data-en="[ All ]">[ Tümü ]</button>
+        <button type="button" id="filter-ai-vision" data-filter="ai-vision" aria-pressed="false" class="proj-filter font-mono text-xs min-h-11 px-4 py-2 rounded-full border border-line text-muted hover:border-line-strong hover:text-ink aria-pressed:border-line-strong aria-pressed:bg-accent-soft aria-pressed:text-accent-text transition-colors cursor-pointer">[ AI &amp; Vision ]</button>
+        <button type="button" id="filter-java-spring" data-filter="java-spring" aria-pressed="false" class="proj-filter font-mono text-xs min-h-11 px-4 py-2 rounded-full border border-line text-muted hover:border-line-strong hover:text-ink aria-pressed:border-line-strong aria-pressed:bg-accent-soft aria-pressed:text-accent-text transition-colors cursor-pointer">[ Java / Spring ]</button>
+        <button type="button" id="filter-python" data-filter="python" aria-pressed="false" class="proj-filter font-mono text-xs min-h-11 px-4 py-2 rounded-full border border-line text-muted hover:border-line-strong hover:text-ink aria-pressed:border-line-strong aria-pressed:bg-accent-soft aria-pressed:text-accent-text transition-colors cursor-pointer">[ Python ]</button>
       </div>
+      <p id="projCount" class="sr-only" aria-live="polite"></p>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
 
         <!-- PROJE: GeziGuru — Google AI Agents Capstone (Öne çıkan) -->
-        <article data-category="ai-vision python" class="project-card group flex flex-col md:col-span-2 rounded-2xl border p-5 transition-all duration-[400ms] ease-out border-slate-300 dark:border-slate-800 bg-white/70 dark:bg-white/[0.03] hover:-translate-y-2 hover:border-violet-500/40 hover:shadow-xl hover:shadow-violet-500/10" data-aos="fade-up" data-aos-delay="40">
+        <article data-category="ai-vision python" class="project-card flex flex-col md:col-span-2 rounded-2xl border border-line bg-surface p-5 md:p-6 hover:border-line-strong transition-all duration-200">
           <div class="grid grid-cols-1 md:grid-cols-2 gap-5 items-center">
-            <a href="https://github.com/osmanfurkanerkan/geziguru" target="_blank" rel="noopener noreferrer" class="relative block overflow-hidden rounded-xl border border-slate-200 dark:border-slate-700">
-              <img src="./geziguru.webp" alt="GeziGuru çok-ajanlı seyahat asistanı arayüzü" loading="lazy" class="w-full h-56 md:h-64 object-cover object-top transition-transform duration-500 group-hover:scale-105" />
-              <span class="absolute top-2 left-2 inline-flex items-center gap-1.5 font-mono text-[10px] px-2 py-1 rounded-md bg-violet-500/90 text-white shadow-lg"><span class="h-1.5 w-1.5 rounded-full bg-white animate-pulse"></span> <span data-en="GOOGLE CAPSTONE">GOOGLE CAPSTONE</span></span>
+            <a href="https://github.com/osmanfurkanerkan/geziguru" target="_blank" rel="noopener noreferrer" class="relative block overflow-hidden rounded-xl border border-line">
+              <img src="./geziguru.webp" alt="GeziGuru çok-ajanlı seyahat asistanı arayüzü" loading="lazy" class="w-full h-56 md:h-64 object-cover object-top" />
+              <span class="absolute top-2 left-2 inline-flex items-center gap-1.5 font-mono text-xs px-2.5 py-1 rounded-full bg-highlight text-[#122C34]"><span class="h-1.5 w-1.5 rounded-full bg-[#122C34]" aria-hidden="true"></span> <span data-en="GOOGLE CAPSTONE">GOOGLE CAPSTONE</span></span>
             </a>
             <div class="flex flex-col">
               <div class="flex items-start justify-between gap-3">
-                <span class="font-mono text-[10px] tracking-wider px-2 py-1 rounded-md bg-violet-500/10 text-violet-600 dark:text-violet-400 border border-violet-500/20">[ AI AGENTS // MULTI-AGENT ]</span>
-                <a href="https://github.com/osmanfurkanerkan/geziguru" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="shrink-0 text-slate-400 hover:text-accent transition-colors"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.49 0-.24-.01-.87-.01-1.71-2.78.62-3.37-1.37-3.37-1.37-.45-1.18-1.11-1.49-1.11-1.49-.91-.64.07-.62.07-.62 1 .07 1.53 1.06 1.53 1.06.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.71 0 0 .84-.27 2.75 1.05a9.4 9.4 0 0 1 5 0c1.91-1.32 2.75-1.05 2.75-1.05.55 1.41.2 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.81-4.57 5.06.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .27.18.6.69.49A10.26 10.26 0 0 0 22 12.25C22 6.58 17.52 2 12 2Z"/></svg></a>
+                <span class="font-mono text-xs tracking-wider px-2.5 py-1 rounded-full bg-accent-soft text-accent-text">[ AI AGENTS // MULTI-AGENT ]</span>
+                <a href="https://github.com/osmanfurkanerkan/geziguru" target="_blank" rel="noopener noreferrer" aria-label="GitHub deposu" data-en-aria="GitHub repository" class="shrink-0 -m-2.5 h-11 w-11 grid place-items-center rounded-lg text-muted hover:text-ink transition-colors"><svg class="h-5 w-5" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.49 0-.24-.01-.87-.01-1.71-2.78.62-3.37-1.37-3.37-1.37-.45-1.18-1.11-1.49-1.11-1.49-.91-.64.07-.62.07-.62 1 .07 1.53 1.06 1.53 1.06.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.71 0 0 .84-.27 2.75 1.05a9.4 9.4 0 0 1 5 0c1.91-1.32 2.75-1.05 2.75-1.05.55 1.41.2 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.81-4.57 5.06.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .27.18.6.69.49A10.26 10.26 0 0 0 22 12.25C22 6.58 17.52 2 12 2Z"/></svg></a>
               </div>
-              <h3 class="font-display text-lg font-bold mt-3">GeziGuru — Secure Multi-Agent Travel Concierge</h3>
-              <p class="mt-2 text-slate-600 dark:text-slate-400 text-sm leading-relaxed" data-en="A Google AI Agents Intensive Capstone project: a multi-agent travel concierge built with Google ADK + Gemini. Features a custom MCP server (SQLite, 11 tools), real venue suggestions via live web search, and a 'Privacy Guard' security layer with PII masking, prompt-injection filtering and zero-trust booking approval.">Google AI Agents Intensive Capstone projesi: ADK + Gemini ile çok-ajanlı seyahat asistanı. Kendi MCP server'ı (SQLite, 11 araç), canlı web aramasıyla gerçek mekan önerileri ve PII maskeleme + prompt-injection filtresi + zero-trust rezervasyon onaylı 'Privacy Guard' güvenlik katmanı.</p>
+              <h3 class="font-display text-lg font-semibold mt-3">GeziGuru — Secure Multi-Agent Travel Concierge</h3>
+              <p class="mt-2 text-muted text-sm leading-relaxed" data-en="A Google AI Agents Intensive Capstone project: a multi-agent travel concierge built with Google ADK + Gemini. Features a custom MCP server (SQLite, 11 tools), real venue suggestions via live web search, and a 'Privacy Guard' security layer with PII masking, prompt-injection filtering and zero-trust booking approval.">Google AI Agents Intensive Capstone projesi: ADK + Gemini ile çok-ajanlı seyahat asistanı. Kendi MCP server'ı (SQLite, 11 araç), canlı web aramasıyla gerçek mekan önerileri ve PII maskeleme + prompt-injection filtresi + zero-trust rezervasyon onaylı 'Privacy Guard' güvenlik katmanı.</p>
               <div class="mt-4 flex flex-wrap gap-2">
-                <span class="font-mono text-xs px-2.5 py-1 rounded-md border border-slate-300 dark:border-slate-700">Google ADK</span>
-                <span class="font-mono text-xs px-2.5 py-1 rounded-md border border-slate-300 dark:border-slate-700">Gemini</span>
-                <span class="font-mono text-xs px-2.5 py-1 rounded-md border border-slate-300 dark:border-slate-700">MCP</span>
-                <span class="font-mono text-xs px-2.5 py-1 rounded-md border border-slate-300 dark:border-slate-700">FastAPI</span>
-                <span class="font-mono text-xs px-2.5 py-1 rounded-md border border-slate-300 dark:border-slate-700">Python</span>
+                <span class="font-mono text-xs px-2.5 py-1 rounded-full bg-surface-2 text-muted border border-line">Google ADK</span>
+                <span class="font-mono text-xs px-2.5 py-1 rounded-full bg-surface-2 text-muted border border-line">Gemini</span>
+                <span class="font-mono text-xs px-2.5 py-1 rounded-full bg-surface-2 text-muted border border-line">MCP</span>
+                <span class="font-mono text-xs px-2.5 py-1 rounded-full bg-surface-2 text-muted border border-line">FastAPI</span>
+                <span class="font-mono text-xs px-2.5 py-1 rounded-full bg-surface-2 text-muted border border-line">Python</span>
               </div>
             </div>
           </div>
         </article>
 
         <!-- PROJE 0: NASA Turbofan RUL (Öne çıkan / Canlı Demo) -->
-        <article data-category="ai-vision python" class="project-card group flex flex-col md:col-span-2 rounded-2xl border p-5 transition-all duration-[400ms] ease-out border-slate-300 dark:border-slate-800 bg-white/70 dark:bg-white/[0.03] hover:-translate-y-2 hover:border-sky-500/40 hover:shadow-xl hover:shadow-sky-500/10" data-aos="fade-up" data-aos-delay="40">
+        <article data-category="ai-vision python" class="project-card flex flex-col md:col-span-2 rounded-2xl border border-line bg-surface p-5 md:p-6 hover:border-line-strong transition-all duration-200">
           <div class="grid grid-cols-1 md:grid-cols-2 gap-5 items-center">
-            <a href="https://turbofan-rul-prediction-cr6qmdkv4lmgh3zj22shyu.streamlit.app" target="_blank" rel="noopener noreferrer" class="relative block overflow-hidden rounded-xl border border-slate-200 dark:border-slate-700">
-              <img src="./proje.webp" alt="Turbofan RUL tahmin paneli" loading="lazy" class="w-full h-56 md:h-64 object-cover object-top transition-transform duration-500 group-hover:scale-105" />
-              <span class="absolute top-2 left-2 inline-flex items-center gap-1.5 font-mono text-[10px] px-2 py-1 rounded-md bg-emerald-500/90 text-white shadow-lg"><span class="h-1.5 w-1.5 rounded-full bg-white animate-pulse"></span> <span data-en="LIVE DEMO">CANLI DEMO</span></span>
+            <a href="https://turbofan-rul-prediction-cr6qmdkv4lmgh3zj22shyu.streamlit.app" target="_blank" rel="noopener noreferrer" class="relative block overflow-hidden rounded-xl border border-line">
+              <img src="./proje.webp" alt="Turbofan RUL tahmin paneli" loading="lazy" class="w-full h-56 md:h-64 object-cover object-top" />
+              <span class="absolute top-2 left-2 inline-flex items-center gap-1.5 font-mono text-xs px-2.5 py-1 rounded-full bg-highlight text-[#122C34]"><span class="h-1.5 w-1.5 rounded-full bg-[#122C34]" aria-hidden="true"></span> <span data-en="LIVE DEMO">CANLI DEMO</span></span>
             </a>
             <div class="flex flex-col">
               <div class="flex items-start justify-between gap-3">
-                <span class="font-mono text-[10px] tracking-wider px-2 py-1 rounded-md bg-sky-500/10 text-sky-600 dark:text-sky-400 border border-sky-500/20">[ ML // PREDICTIVE MAINTENANCE ]</span>
-                <a href="https://github.com/osmanfurkanerkan/turbofan-rul-prediction" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="shrink-0 text-slate-400 hover:text-accent transition-colors"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.49 0-.24-.01-.87-.01-1.71-2.78.62-3.37-1.37-3.37-1.37-.45-1.18-1.11-1.49-1.11-1.49-.91-.64.07-.62.07-.62 1 .07 1.53 1.06 1.53 1.06.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.71 0 0 .84-.27 2.75 1.05a9.4 9.4 0 0 1 5 0c1.91-1.32 2.75-1.05 2.75-1.05.55 1.41.2 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.81-4.57 5.06.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .27.18.6.69.49A10.26 10.26 0 0 0 22 12.25C22 6.58 17.52 2 12 2Z"/></svg></a>
+                <span class="font-mono text-xs tracking-wider px-2.5 py-1 rounded-full bg-accent-soft text-accent-text">[ ML // PREDICTIVE MAINTENANCE ]</span>
+                <a href="https://github.com/osmanfurkanerkan/turbofan-rul-prediction" target="_blank" rel="noopener noreferrer" aria-label="GitHub deposu" data-en-aria="GitHub repository" class="shrink-0 -m-2.5 h-11 w-11 grid place-items-center rounded-lg text-muted hover:text-ink transition-colors"><svg class="h-5 w-5" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.49 0-.24-.01-.87-.01-1.71-2.78.62-3.37-1.37-3.37-1.37-.45-1.18-1.11-1.49-1.11-1.49-.91-.64.07-.62.07-.62 1 .07 1.53 1.06 1.53 1.06.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.71 0 0 .84-.27 2.75 1.05a9.4 9.4 0 0 1 5 0c1.91-1.32 2.75-1.05 2.75-1.05.55 1.41.2 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.81-4.57 5.06.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .27.18.6.69.49A10.26 10.26 0 0 0 22 12.25C22 6.58 17.52 2 12 2Z"/></svg></a>
               </div>
-              <h3 class="font-display text-lg font-bold mt-3">Turbofan Engine RUL Prediction</h3>
-              <p class="mt-2 text-slate-600 dark:text-slate-400 text-sm leading-relaxed" data-en="An end-to-end ML project predicting the Remaining Useful Life (RUL) of jet engines from NASA C-MAPSS sensor data. Feature engineering (drift / slope / EWMA) with XGBoost reaches a test RMSE ≈ 13.6, deployed live as a cockpit-themed Streamlit dashboard with a fleet-health view.">NASA C-MAPSS sensör verisiyle uçak motorlarının kalan faydalı ömrünü (RUL) tahmin eden uçtan uca ML projesi. Feature engineering (drift / slope / EWMA) ve XGBoost ile test RMSE ≈ 13.6; kokpit temalı, filo sağlık panolu Streamlit panosuyla canlıya alındı.</p>
+              <h3 class="font-display text-lg font-semibold mt-3">Turbofan Engine RUL Prediction</h3>
+              <p class="mt-2 text-muted text-sm leading-relaxed" data-en="An end-to-end ML project predicting the Remaining Useful Life (RUL) of jet engines from NASA C-MAPSS sensor data. Feature engineering (drift / slope / EWMA) with XGBoost reaches a test RMSE ≈ 13.6, deployed live as a cockpit-themed Streamlit dashboard with a fleet-health view.">NASA C-MAPSS sensör verisiyle uçak motorlarının kalan faydalı ömrünü (RUL) tahmin eden uçtan uca ML projesi. Feature engineering (drift / slope / EWMA) ve XGBoost ile test RMSE ≈ 13.6; kokpit temalı, filo sağlık panolu Streamlit panosuyla canlıya alındı.</p>
               <div class="mt-4 flex flex-wrap gap-2">
-                <span class="font-mono text-xs px-2.5 py-1 rounded-md border border-slate-300 dark:border-slate-700">Python</span>
-                <span class="font-mono text-xs px-2.5 py-1 rounded-md border border-slate-300 dark:border-slate-700">XGBoost</span>
-                <span class="font-mono text-xs px-2.5 py-1 rounded-md border border-slate-300 dark:border-slate-700">scikit-learn</span>
-                <span class="font-mono text-xs px-2.5 py-1 rounded-md border border-slate-300 dark:border-slate-700">Streamlit</span>
-                <span class="font-mono text-xs px-2.5 py-1 rounded-md border border-slate-300 dark:border-slate-700">Pandas</span>
+                <span class="font-mono text-xs px-2.5 py-1 rounded-full bg-surface-2 text-muted border border-line">Python</span>
+                <span class="font-mono text-xs px-2.5 py-1 rounded-full bg-surface-2 text-muted border border-line">XGBoost</span>
+                <span class="font-mono text-xs px-2.5 py-1 rounded-full bg-surface-2 text-muted border border-line">scikit-learn</span>
+                <span class="font-mono text-xs px-2.5 py-1 rounded-full bg-surface-2 text-muted border border-line">Streamlit</span>
+                <span class="font-mono text-xs px-2.5 py-1 rounded-full bg-surface-2 text-muted border border-line">Pandas</span>
               </div>
               <div class="mt-4 flex flex-wrap gap-2.5">
-                <a href="https://turbofan-rul-prediction-cr6qmdkv4lmgh3zj22shyu.streamlit.app" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-full px-4 py-2 font-mono text-xs bg-sky-500/15 border border-sky-400/50 text-sky-600 dark:text-sky-300 hover:bg-sky-500/25 transition-all"><span data-en="Live Demo">Canlı Demo</span> <span class="font-bold">↗</span></a>
+                <a href="https://turbofan-rul-prediction-cr6qmdkv4lmgh3zj22shyu.streamlit.app" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-xl px-4 py-2.5 text-sm font-medium border border-line-strong text-ink hover:bg-accent-soft transition-colors"><span data-en="Live Demo">Canlı Demo</span> <span aria-hidden="true">↗</span></a>
               </div>
             </div>
           </div>
         </article>
 
         <!-- PROJE: Decision Memory RAG -->
-        <article data-category="ai-vision python" class="project-card group flex flex-col rounded-2xl border p-5 transition-all duration-[400ms] ease-out border-slate-300 dark:border-slate-800 bg-white/70 dark:bg-white/[0.03] hover:-translate-y-2 hover:border-sky-500/40 hover:shadow-xl hover:shadow-sky-500/10" data-aos="fade-up" data-aos-delay="40">
+        <article data-category="ai-vision python" class="project-card flex flex-col rounded-2xl border border-line bg-surface p-5 md:p-6 hover:border-line-strong transition-all duration-200">
           <div class="flex items-start justify-between gap-3">
-            <span class="font-mono text-[10px] tracking-wider px-2 py-1 rounded-md bg-sky-500/10 text-sky-600 dark:text-sky-400 border border-sky-500/20">[ AI // RAG · TEMPORAL RETRIEVAL ]</span>
-            <a href="https://github.com/osmanfurkanerkan/decision-memory-rag" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="shrink-0 text-slate-400 hover:text-accent transition-colors"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.49 0-.24-.01-.87-.01-1.71-2.78.62-3.37-1.37-3.37-1.37-.45-1.18-1.11-1.49-1.11-1.49-.91-.64.07-.62.07-.62 1 .07 1.53 1.06 1.53 1.06.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.71 0 0 .84-.27 2.75 1.05a9.4 9.4 0 0 1 5 0c1.91-1.32 2.75-1.05 2.75-1.05.55 1.41.2 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.81-4.57 5.06.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .27.18.6.69.49A10.26 10.26 0 0 0 22 12.25C22 6.58 17.52 2 12 2Z"/></svg></a>
+            <span class="font-mono text-xs tracking-wider px-2.5 py-1 rounded-full bg-accent-soft text-accent-text">[ AI // RAG · TEMPORAL RETRIEVAL ]</span>
+            <a href="https://github.com/osmanfurkanerkan/decision-memory-rag" target="_blank" rel="noopener noreferrer" aria-label="GitHub deposu" data-en-aria="GitHub repository" class="shrink-0 -m-2.5 h-11 w-11 grid place-items-center rounded-lg text-muted hover:text-ink transition-colors"><svg class="h-5 w-5" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.49 0-.24-.01-.87-.01-1.71-2.78.62-3.37-1.37-3.37-1.37-.45-1.18-1.11-1.49-1.11-1.49-.91-.64.07-.62.07-.62 1 .07 1.53 1.06 1.53 1.06.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.71 0 0 .84-.27 2.75 1.05a9.4 9.4 0 0 1 5 0c1.91-1.32 2.75-1.05 2.75-1.05.55 1.41.2 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.81-4.57 5.06.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .27.18.6.69.49A10.26 10.26 0 0 0 22 12.25C22 6.58 17.52 2 12 2Z"/></svg></a>
           </div>
-          <h3 class="font-display text-lg font-bold mt-3" data-en="Decision Memory — Status-Aware RAG">Karar Hafızası — Durum-Farkındalıklı RAG</h3>
-          <p class="mt-2 text-slate-600 dark:text-slate-400 text-sm leading-relaxed" data-en="A fully offline RAG assistant that checks whether a document retrieved from the Python PEP archive is still in force or has been superseded/rejected. Adds supersession-chain resolution and status-aware reranking on top of hybrid (embedding + BM25 + RRF) retrieval — cut the invalid-source rate by 33% in a measured A/B test. Second project of the Microsoft 'Summer School Foundry Local' internship.">Python PEP arşivinde arama yapıp bulduğu belgenin hâlâ yürürlükte mi yoksa değiştirilmiş/reddedilmiş mi olduğunu tespit eden, tamamen offline çalışan RAG asistanı. Hibrit retrieval'a (embedding + BM25 + RRF) halefiyet zinciri çözümü ve durum-farkındalıklı reranking eklendi; ölçülen A/B testinde geçersiz kaynak oranı %33 azaldı. Microsoft "Summer School Foundry Local" staj programının ikinci projesi.</p>
+          <h3 class="font-display text-lg font-semibold mt-3" data-en="Decision Memory — Status-Aware RAG">Karar Hafızası — Durum-Farkındalıklı RAG</h3>
+          <p class="mt-2 text-muted text-sm leading-relaxed" data-en="A fully offline RAG assistant that checks whether a document retrieved from the Python PEP archive is still in force or has been superseded/rejected. Adds supersession-chain resolution and status-aware reranking on top of hybrid (embedding + BM25 + RRF) retrieval — cut the invalid-source rate by 33% in a measured A/B test. Second project of the Microsoft AI Innovators internship.">Python PEP arşivinde arama yapıp bulduğu belgenin hâlâ yürürlükte mi yoksa değiştirilmiş/reddedilmiş mi olduğunu tespit eden, tamamen offline çalışan RAG asistanı. Hibrit retrieval'a (embedding + BM25 + RRF) halefiyet zinciri çözümü ve durum-farkındalıklı reranking eklendi; ölçülen A/B testinde geçersiz kaynak oranı %33 azaldı. Microsoft AI Innovators staj programının ikinci projesi.</p>
           <div class="mt-4 flex flex-wrap gap-2">
-            <span class="font-mono text-xs px-2.5 py-1 rounded-md border border-slate-300 dark:border-slate-700">Python</span>
-            <span class="font-mono text-xs px-2.5 py-1 rounded-md border border-slate-300 dark:border-slate-700">LangChain</span>
-            <span class="font-mono text-xs px-2.5 py-1 rounded-md border border-slate-300 dark:border-slate-700">ChromaDB</span>
-            <span class="font-mono text-xs px-2.5 py-1 rounded-md border border-slate-300 dark:border-slate-700">Foundry Local</span>
-            <span class="font-mono text-xs px-2.5 py-1 rounded-md border border-slate-300 dark:border-slate-700">Hybrid Search</span>
+            <span class="font-mono text-xs px-2.5 py-1 rounded-full bg-surface-2 text-muted border border-line">Python</span>
+            <span class="font-mono text-xs px-2.5 py-1 rounded-full bg-surface-2 text-muted border border-line">LangChain</span>
+            <span class="font-mono text-xs px-2.5 py-1 rounded-full bg-surface-2 text-muted border border-line">ChromaDB</span>
+            <span class="font-mono text-xs px-2.5 py-1 rounded-full bg-surface-2 text-muted border border-line">Foundry Local</span>
+            <span class="font-mono text-xs px-2.5 py-1 rounded-full bg-surface-2 text-muted border border-line">Hybrid Search</span>
           </div>
         </article>
 
         <!-- PROJE: Foundry Local RAG Assistant -->
-        <article data-category="ai-vision python" class="project-card group flex flex-col rounded-2xl border p-5 transition-all duration-[400ms] ease-out border-slate-300 dark:border-slate-800 bg-white/70 dark:bg-white/[0.03] hover:-translate-y-2 hover:border-sky-500/40 hover:shadow-xl hover:shadow-sky-500/10" data-aos="fade-up" data-aos-delay="100">
+        <article data-category="ai-vision python" class="project-card flex flex-col rounded-2xl border border-line bg-surface p-5 md:p-6 hover:border-line-strong transition-all duration-200">
           <div class="flex items-start justify-between gap-3">
-            <span class="font-mono text-[10px] tracking-wider px-2 py-1 rounded-md bg-sky-500/10 text-sky-600 dark:text-sky-400 border border-sky-500/20">[ AI // RAG · CORRECTIVE RETRIEVAL ]</span>
-            <a href="https://github.com/osmanfurkanerkan/foundry-local-rag-assistant" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="shrink-0 text-slate-400 hover:text-accent transition-colors"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.49 0-.24-.01-.87-.01-1.71-2.78.62-3.37-1.37-3.37-1.37-.45-1.18-1.11-1.49-1.11-1.49-.91-.64.07-.62.07-.62 1 .07 1.53 1.06 1.53 1.06.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.71 0 0 .84-.27 2.75 1.05a9.4 9.4 0 0 1 5 0c1.91-1.32 2.75-1.05 2.75-1.05.55 1.41.2 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.81-4.57 5.06.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .27.18.6.69.49A10.26 10.26 0 0 0 22 12.25C22 6.58 17.52 2 12 2Z"/></svg></a>
+            <span class="font-mono text-xs tracking-wider px-2.5 py-1 rounded-full bg-accent-soft text-accent-text">[ AI // RAG · CORRECTIVE RETRIEVAL ]</span>
+            <a href="https://github.com/osmanfurkanerkan/foundry-local-rag-assistant" target="_blank" rel="noopener noreferrer" aria-label="GitHub deposu" data-en-aria="GitHub repository" class="shrink-0 -m-2.5 h-11 w-11 grid place-items-center rounded-lg text-muted hover:text-ink transition-colors"><svg class="h-5 w-5" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.49 0-.24-.01-.87-.01-1.71-2.78.62-3.37-1.37-3.37-1.37-.45-1.18-1.11-1.49-1.11-1.49-.91-.64.07-.62.07-.62 1 .07 1.53 1.06 1.53 1.06.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.71 0 0 .84-.27 2.75 1.05a9.4 9.4 0 0 1 5 0c1.91-1.32 2.75-1.05 2.75-1.05.55 1.41.2 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.81-4.57 5.06.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .27.18.6.69.49A10.26 10.26 0 0 0 22 12.25C22 6.58 17.52 2 12 2Z"/></svg></a>
           </div>
-          <h3 class="font-display text-lg font-bold mt-3">Foundry Local RAG Assistant</h3>
-          <p class="mt-2 text-slate-600 dark:text-slate-400 text-sm leading-relaxed" data-en="A fully offline Q&amp;A assistant built with Microsoft Foundry Local, using hybrid search (embedding + BM25), cross-encoder reranking and LangGraph-based corrective RAG — a self-grading retriever that retries with a different strategy when its own context isn't good enough. First project of the Microsoft 'Summer School Foundry Local' internship; 93% accuracy in a custom LLM-judge evaluation.">Microsoft Foundry Local ile tamamen offline çalışan; hibrit arama (embedding + BM25), cross-encoder reranking ve LangGraph tabanlı corrective RAG — kendi bağlamını yetersiz bulduğunda farklı bir stratejiyle yeniden deneyen kendini-değerlendiren bir retrieval — kullanan soru-cevap asistanı. Microsoft "Summer School Foundry Local" staj programının ilk projesi; özel bir LLM-judge değerlendirmesinde %93 doğruluk.</p>
+          <h3 class="font-display text-lg font-semibold mt-3">Foundry Local RAG Assistant</h3>
+          <p class="mt-2 text-muted text-sm leading-relaxed" data-en="A fully offline Q&amp;A assistant built with Microsoft Foundry Local, using hybrid search (embedding + BM25), cross-encoder reranking and LangGraph-based corrective RAG — a self-grading retriever that retries with a different strategy when its own context isn't good enough. First project of the Microsoft AI Innovators internship; 93% accuracy in a custom LLM-judge evaluation.">Microsoft Foundry Local ile tamamen offline çalışan; hibrit arama (embedding + BM25), cross-encoder reranking ve LangGraph tabanlı corrective RAG — kendi bağlamını yetersiz bulduğunda farklı bir stratejiyle yeniden deneyen kendini-değerlendiren bir retrieval — kullanan soru-cevap asistanı. Microsoft AI Innovators staj programının ilk projesi; özel bir LLM-judge değerlendirmesinde %93 doğruluk.</p>
           <div class="mt-4 flex flex-wrap gap-2">
-            <span class="font-mono text-xs px-2.5 py-1 rounded-md border border-slate-300 dark:border-slate-700">Python</span>
-            <span class="font-mono text-xs px-2.5 py-1 rounded-md border border-slate-300 dark:border-slate-700">LangChain</span>
-            <span class="font-mono text-xs px-2.5 py-1 rounded-md border border-slate-300 dark:border-slate-700">LangGraph</span>
-            <span class="font-mono text-xs px-2.5 py-1 rounded-md border border-slate-300 dark:border-slate-700">FastAPI</span>
-            <span class="font-mono text-xs px-2.5 py-1 rounded-md border border-slate-300 dark:border-slate-700">Docker</span>
+            <span class="font-mono text-xs px-2.5 py-1 rounded-full bg-surface-2 text-muted border border-line">Python</span>
+            <span class="font-mono text-xs px-2.5 py-1 rounded-full bg-surface-2 text-muted border border-line">LangChain</span>
+            <span class="font-mono text-xs px-2.5 py-1 rounded-full bg-surface-2 text-muted border border-line">LangGraph</span>
+            <span class="font-mono text-xs px-2.5 py-1 rounded-full bg-surface-2 text-muted border border-line">FastAPI</span>
+            <span class="font-mono text-xs px-2.5 py-1 rounded-full bg-surface-2 text-muted border border-line">Docker</span>
           </div>
         </article>
 
         <!-- PROJE: Samsung BrandPulse -->
-        <article data-category="ai-vision python" class="project-card group flex flex-col rounded-2xl border p-5 transition-all duration-[400ms] ease-out border-slate-300 dark:border-slate-800 bg-white/70 dark:bg-white/[0.03] hover:-translate-y-2 hover:border-sky-500/40 hover:shadow-xl hover:shadow-sky-500/10" data-aos="fade-up" data-aos-delay="60">
+        <article data-category="ai-vision python" class="project-card flex flex-col rounded-2xl border border-line bg-surface p-5 md:p-6 hover:border-line-strong transition-all duration-200">
           <div class="flex items-start justify-between gap-3">
-            <span class="font-mono text-[10px] tracking-wider px-2 py-1 rounded-md bg-cyan-500/10 text-cyan-600 dark:text-cyan-400 border border-cyan-500/20">[ HACKATHON // AI BRAND ANALYTICS ]</span>
-            <a href="https://github.com/osmanfurkanerkan/samsung-hackathon-brandpulse" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="shrink-0 text-slate-400 hover:text-accent transition-colors"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.49 0-.24-.01-.87-.01-1.71-2.78.62-3.37-1.37-3.37-1.37-.45-1.18-1.11-1.49-1.11-1.49-.91-.64.07-.62.07-.62 1 .07 1.53 1.06 1.53 1.06.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.71 0 0 .84-.27 2.75 1.05a9.4 9.4 0 0 1 5 0c1.91-1.32 2.75-1.05 2.75-1.05.55 1.41.2 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.81-4.57 5.06.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .27.18.6.69.49A10.26 10.26 0 0 0 22 12.25C22 6.58 17.52 2 12 2Z"/></svg></a>
+            <span class="font-mono text-xs tracking-wider px-2.5 py-1 rounded-full bg-accent-soft text-accent-text">[ HACKATHON // AI BRAND ANALYTICS ]</span>
+            <a href="https://github.com/osmanfurkanerkan/samsung-hackathon-brandpulse" target="_blank" rel="noopener noreferrer" aria-label="GitHub deposu" data-en-aria="GitHub repository" class="shrink-0 -m-2.5 h-11 w-11 grid place-items-center rounded-lg text-muted hover:text-ink transition-colors"><svg class="h-5 w-5" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.49 0-.24-.01-.87-.01-1.71-2.78.62-3.37-1.37-3.37-1.37-.45-1.18-1.11-1.49-1.11-1.49-.91-.64.07-.62.07-.62 1 .07 1.53 1.06 1.53 1.06.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.71 0 0 .84-.27 2.75 1.05a9.4 9.4 0 0 1 5 0c1.91-1.32 2.75-1.05 2.75-1.05.55 1.41.2 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.81-4.57 5.06.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .27.18.6.69.49A10.26 10.26 0 0 0 22 12.25C22 6.58 17.52 2 12 2Z"/></svg></a>
           </div>
-          <h3 class="font-display text-lg font-bold mt-3">Samsung BrandPulse — AI Brand Analytics</h3>
-          <p class="mt-2 text-slate-600 dark:text-slate-400 text-sm leading-relaxed" data-en="A real-time brand sentiment and crisis dynamics dashboard developed for Samsung Hackathon, processing social feedback via NLP &amp; sentiment analysis models.">Samsung Hackathon'u için geliştirilen; sosyal medya ve müşteri geri bildirimlerini NLP ve duygu analizi modelleriyle işleyen, markaların anlık algı ve kriz dinamiklerini ölçen yapay zeka destekli analitik panosu.</p>
+          <h3 class="font-display text-lg font-semibold mt-3">Samsung BrandPulse — AI Brand Analytics</h3>
+          <p class="mt-2 text-muted text-sm leading-relaxed" data-en="A real-time brand sentiment and crisis dynamics dashboard developed for Samsung Hackathon, processing social feedback via NLP &amp; sentiment analysis models.">Samsung Hackathon'u için geliştirilen; sosyal medya ve müşteri geri bildirimlerini NLP ve duygu analizi modelleriyle işleyen, markaların anlık algı ve kriz dinamiklerini ölçen yapay zeka destekli analitik panosu.</p>
           <div class="mt-4 flex flex-wrap gap-2">
-            <span class="font-mono text-xs px-2.5 py-1 rounded-md border border-slate-300 dark:border-slate-700">Python</span>
-            <span class="font-mono text-xs px-2.5 py-1 rounded-md border border-slate-300 dark:border-slate-700">NLP</span>
-            <span class="font-mono text-xs px-2.5 py-1 rounded-md border border-slate-300 dark:border-slate-700">FastAPI</span>
-            <span class="font-mono text-xs px-2.5 py-1 rounded-md border border-slate-300 dark:border-slate-700">JavaScript</span>
+            <span class="font-mono text-xs px-2.5 py-1 rounded-full bg-surface-2 text-muted border border-line">Python</span>
+            <span class="font-mono text-xs px-2.5 py-1 rounded-full bg-surface-2 text-muted border border-line">NLP</span>
+            <span class="font-mono text-xs px-2.5 py-1 rounded-full bg-surface-2 text-muted border border-line">FastAPI</span>
+            <span class="font-mono text-xs px-2.5 py-1 rounded-full bg-surface-2 text-muted border border-line">JavaScript</span>
           </div>
         </article>
 
         <!-- PROJE 1: Smart Waste -->
-        <article data-category="ai-vision python" class="project-card group flex flex-col rounded-2xl border p-5 transition-all duration-[400ms] ease-out border-slate-300 dark:border-slate-800 bg-white/70 dark:bg-white/[0.03] hover:-translate-y-2 hover:border-sky-500/40 hover:shadow-xl hover:shadow-sky-500/10" data-aos="fade-up" data-aos-delay="40">
+        <article data-category="ai-vision python" class="project-card flex flex-col rounded-2xl border border-line bg-surface p-5 md:p-6 hover:border-line-strong transition-all duration-200">
           <div class="flex items-start justify-between gap-3">
-            <span class="font-mono text-[10px] tracking-wider px-2 py-1 rounded-md bg-sky-500/10 text-sky-600 dark:text-sky-400 border border-sky-500/20">[ AI // COMPUTER VISION ]</span>
-            <a href="https://github.com/osmanfurkanerkan/smart-waste-classification" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="shrink-0 text-slate-400 hover:text-accent transition-colors"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.49 0-.24-.01-.87-.01-1.71-2.78.62-3.37-1.37-3.37-1.37-.45-1.18-1.11-1.49-1.11-1.49-.91-.64.07-.62.07-.62 1 .07 1.53 1.06 1.53 1.06.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.71 0 0 .84-.27 2.75 1.05a9.4 9.4 0 0 1 5 0c1.91-1.32 2.75-1.05 2.75-1.05.55 1.41.2 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.81-4.57 5.06.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .27.18.6.69.49A10.26 10.26 0 0 0 22 12.25C22 6.58 17.52 2 12 2Z"/></svg></a>
+            <span class="font-mono text-xs tracking-wider px-2.5 py-1 rounded-full bg-accent-soft text-accent-text">[ AI // COMPUTER VISION ]</span>
+            <a href="https://github.com/osmanfurkanerkan/smart-waste-classification" target="_blank" rel="noopener noreferrer" aria-label="GitHub deposu" data-en-aria="GitHub repository" class="shrink-0 -m-2.5 h-11 w-11 grid place-items-center rounded-lg text-muted hover:text-ink transition-colors"><svg class="h-5 w-5" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.49 0-.24-.01-.87-.01-1.71-2.78.62-3.37-1.37-3.37-1.37-.45-1.18-1.11-1.49-1.11-1.49-.91-.64.07-.62.07-.62 1 .07 1.53 1.06 1.53 1.06.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.71 0 0 .84-.27 2.75 1.05a9.4 9.4 0 0 1 5 0c1.91-1.32 2.75-1.05 2.75-1.05.55 1.41.2 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.81-4.57 5.06.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .27.18.6.69.49A10.26 10.26 0 0 0 22 12.25C22 6.58 17.52 2 12 2Z"/></svg></a>
           </div>
-          <h3 class="font-display text-lg font-bold mt-3">Modular Smart Waste Classification</h3>
-          <p class="mt-2 text-slate-600 dark:text-slate-400 text-sm leading-relaxed" data-en="An image classification pipeline trained from scratch with a custom CNN architecture, optimized for edge devices and IoT smart-bin routing.">Kendi custom CNN mimarisiyle sıfırdan eğitilmiş, edge cihazlar ve IoT akıllı çöp kutusu yönlendirmesine optimize görüntü sınıflandırma hattı.</p>
+          <h3 class="font-display text-lg font-semibold mt-3">Modular Smart Waste Classification</h3>
+          <p class="mt-2 text-muted text-sm leading-relaxed" data-en="An image classification pipeline trained from scratch with a custom CNN architecture, optimized for edge devices and IoT smart-bin routing.">Kendi custom CNN mimarisiyle sıfırdan eğitilmiş, edge cihazlar ve IoT akıllı çöp kutusu yönlendirmesine optimize görüntü sınıflandırma hattı.</p>
           <div class="mt-4 flex flex-wrap gap-2">
-            <span class="font-mono text-xs px-2.5 py-1 rounded-md border border-slate-300 dark:border-slate-700">Python</span>
-            <span class="font-mono text-xs px-2.5 py-1 rounded-md border border-slate-300 dark:border-slate-700">TensorFlow</span>
-            <span class="font-mono text-xs px-2.5 py-1 rounded-md border border-slate-300 dark:border-slate-700">Keras</span>
-            <span class="font-mono text-xs px-2.5 py-1 rounded-md border border-slate-300 dark:border-slate-700">OpenCV</span>
+            <span class="font-mono text-xs px-2.5 py-1 rounded-full bg-surface-2 text-muted border border-line">Python</span>
+            <span class="font-mono text-xs px-2.5 py-1 rounded-full bg-surface-2 text-muted border border-line">TensorFlow</span>
+            <span class="font-mono text-xs px-2.5 py-1 rounded-full bg-surface-2 text-muted border border-line">Keras</span>
+            <span class="font-mono text-xs px-2.5 py-1 rounded-full bg-surface-2 text-muted border border-line">OpenCV</span>
           </div>
         </article>
 
         <!-- PROJE 2: Code-Night -->
-        <article data-category="java-spring" class="project-card group flex flex-col rounded-2xl border p-5 transition-all duration-[400ms] ease-out border-slate-300 dark:border-slate-800 bg-white/70 dark:bg-white/[0.03] hover:-translate-y-2 hover:border-sky-500/40 hover:shadow-xl hover:shadow-sky-500/10" data-aos="fade-up" data-aos-delay="100">
+        <article data-category="java-spring" class="project-card flex flex-col rounded-2xl border border-line bg-surface p-5 md:p-6 hover:border-line-strong transition-all duration-200">
           <div class="flex items-start justify-between gap-3">
-            <span class="font-mono text-[10px] tracking-wider px-2 py-1 rounded-md bg-amber-500/10 text-amber-600 dark:text-amber-400 border border-amber-500/20">[ HACKATHON WINNER // 2ND PLACE ]</span>
-            <a href="https://github.com/osmanfurkanerkan/Code-Night" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="shrink-0 text-slate-400 hover:text-accent transition-colors"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.49 0-.24-.01-.87-.01-1.71-2.78.62-3.37-1.37-3.37-1.37-.45-1.18-1.11-1.49-1.11-1.49-.91-.64.07-.62.07-.62 1 .07 1.53 1.06 1.53 1.06.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.71 0 0 .84-.27 2.75 1.05a9.4 9.4 0 0 1 5 0c1.91-1.32 2.75-1.05 2.75-1.05.55 1.41.2 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.81-4.57 5.06.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .27.18.6.69.49A10.26 10.26 0 0 0 22 12.25C22 6.58 17.52 2 12 2Z"/></svg></a>
+            <span class="font-mono text-xs tracking-wider px-2.5 py-1 rounded-full bg-accent-soft text-accent-text">[ HACKATHON WINNER // 2ND PLACE ]</span>
+            <a href="https://github.com/osmanfurkanerkan/Code-Night" target="_blank" rel="noopener noreferrer" aria-label="GitHub deposu" data-en-aria="GitHub repository" class="shrink-0 -m-2.5 h-11 w-11 grid place-items-center rounded-lg text-muted hover:text-ink transition-colors"><svg class="h-5 w-5" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.49 0-.24-.01-.87-.01-1.71-2.78.62-3.37-1.37-3.37-1.37-.45-1.18-1.11-1.49-1.11-1.49-.91-.64.07-.62.07-.62 1 .07 1.53 1.06 1.53 1.06.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.71 0 0 .84-.27 2.75 1.05a9.4 9.4 0 0 1 5 0c1.91-1.32 2.75-1.05 2.75-1.05.55 1.41.2 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.81-4.57 5.06.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .27.18.6.69.49A10.26 10.26 0 0 0 22 12.25C22 6.58 17.52 2 12 2Z"/></svg></a>
           </div>
-          <h3 class="font-display text-lg font-bold mt-3">Game+ Gamification &amp; Rule Engine</h3>
-          <p class="mt-2 text-slate-600 dark:text-slate-400 text-sm leading-relaxed" data-en="A task/reward automation built from scratch in 10 hours for Turkcell Game+, featuring an append-only ledger architecture and a deterministic rule engine.">Turkcell Game+ için 10 saatte sıfırdan geliştirilen; append-only ledger mimarili ve deterministik kural motorlu görev/ödül otomasyonu.</p>
+          <h3 class="font-display text-lg font-semibold mt-3">Game+ Gamification &amp; Rule Engine</h3>
+          <p class="mt-2 text-muted text-sm leading-relaxed" data-en="A task/reward automation built from scratch in 10 hours for Turkcell Game+, featuring an append-only ledger architecture and a deterministic rule engine.">Turkcell Game+ için 10 saatte sıfırdan geliştirilen; append-only ledger mimarili ve deterministik kural motorlu görev/ödül otomasyonu.</p>
           <div class="mt-4 flex flex-wrap gap-2">
-            <span class="font-mono text-xs px-2.5 py-1 rounded-md border border-slate-300 dark:border-slate-700">Java 21</span>
-            <span class="font-mono text-xs px-2.5 py-1 rounded-md border border-slate-300 dark:border-slate-700">Spring Boot</span>
-            <span class="font-mono text-xs px-2.5 py-1 rounded-md border border-slate-300 dark:border-slate-700">PostgreSQL</span>
-            <span class="font-mono text-xs px-2.5 py-1 rounded-md border border-slate-300 dark:border-slate-700">Flyway</span>
+            <span class="font-mono text-xs px-2.5 py-1 rounded-full bg-surface-2 text-muted border border-line">Java 21</span>
+            <span class="font-mono text-xs px-2.5 py-1 rounded-full bg-surface-2 text-muted border border-line">Spring Boot</span>
+            <span class="font-mono text-xs px-2.5 py-1 rounded-full bg-surface-2 text-muted border border-line">PostgreSQL</span>
+            <span class="font-mono text-xs px-2.5 py-1 rounded-full bg-surface-2 text-muted border border-line">Flyway</span>
           </div>
         </article>
 
         <!-- PROJE 3: TextJedi -->
-        <article data-category="java-spring" class="project-card group flex flex-col rounded-2xl border p-5 transition-all duration-[400ms] ease-out border-slate-300 dark:border-slate-800 bg-white/70 dark:bg-white/[0.03] hover:-translate-y-2 hover:border-sky-500/40 hover:shadow-xl hover:shadow-sky-500/10" data-aos="fade-up" data-aos-delay="40">
+        <article data-category="java-spring" class="project-card flex flex-col rounded-2xl border border-line bg-surface p-5 md:p-6 hover:border-line-strong transition-all duration-200">
           <div class="flex items-start justify-between gap-3">
-            <span class="font-mono text-[10px] tracking-wider px-2 py-1 rounded-md bg-sky-500/10 text-sky-600 dark:text-sky-400 border border-sky-500/20">[ DESKTOP // SOFTWARE ARCHITECTURE ]</span>
-            <a href="https://github.com/osmanfurkanerkan/TextJedi" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="shrink-0 text-slate-400 hover:text-accent transition-colors"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.49 0-.24-.01-.87-.01-1.71-2.78.62-3.37-1.37-3.37-1.37-.45-1.18-1.11-1.49-1.11-1.49-.91-.64.07-.62.07-.62 1 .07 1.53 1.06 1.53 1.06.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.71 0 0 .84-.27 2.75 1.05a9.4 9.4 0 0 1 5 0c1.91-1.32 2.75-1.05 2.75-1.05.55 1.41.2 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.81-4.57 5.06.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .27.18.6.69.49A10.26 10.26 0 0 0 22 12.25C22 6.58 17.52 2 12 2Z"/></svg></a>
+            <span class="font-mono text-xs tracking-wider px-2.5 py-1 rounded-full bg-accent-soft text-accent-text">[ DESKTOP // SOFTWARE ARCHITECTURE ]</span>
+            <a href="https://github.com/osmanfurkanerkan/TextJedi" target="_blank" rel="noopener noreferrer" aria-label="GitHub deposu" data-en-aria="GitHub repository" class="shrink-0 -m-2.5 h-11 w-11 grid place-items-center rounded-lg text-muted hover:text-ink transition-colors"><svg class="h-5 w-5" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.49 0-.24-.01-.87-.01-1.71-2.78.62-3.37-1.37-3.37-1.37-.45-1.18-1.11-1.49-1.11-1.49-.91-.64.07-.62.07-.62 1 .07 1.53 1.06 1.53 1.06.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.71 0 0 .84-.27 2.75 1.05a9.4 9.4 0 0 1 5 0c1.91-1.32 2.75-1.05 2.75-1.05.55 1.41.2 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.81-4.57 5.06.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .27.18.6.69.49A10.26 10.26 0 0 0 22 12.25C22 6.58 17.52 2 12 2Z"/></svg></a>
           </div>
-          <h3 class="font-display text-lg font-bold mt-3">TextJedi: Architecture-Driven Editor</h3>
-          <p class="mt-2 text-slate-600 dark:text-slate-400 text-sm leading-relaxed" data-en="A smart text processor designed with Abstract Factory, Command and Singleton patterns, featuring native Gemini AI and asynchronous Undo/Redo support.">Abstract Factory, Command ve Singleton kalıplarıyla tasarlanmış; native Gemini AI ve asenkron Undo/Redo destekli akıllı metin işleyici.</p>
+          <h3 class="font-display text-lg font-semibold mt-3">TextJedi: Architecture-Driven Editor</h3>
+          <p class="mt-2 text-muted text-sm leading-relaxed" data-en="A smart text processor designed with Abstract Factory, Command and Singleton patterns, featuring native Gemini AI and asynchronous Undo/Redo support.">Abstract Factory, Command ve Singleton kalıplarıyla tasarlanmış; native Gemini AI ve asenkron Undo/Redo destekli akıllı metin işleyici.</p>
           <div class="mt-4 flex flex-wrap gap-2">
-            <span class="font-mono text-xs px-2.5 py-1 rounded-md border border-slate-300 dark:border-slate-700">Java Swing</span>
-            <span class="font-mono text-xs px-2.5 py-1 rounded-md border border-slate-300 dark:border-slate-700">Google GenAI SDK</span>
-            <span class="font-mono text-xs px-2.5 py-1 rounded-md border border-slate-300 dark:border-slate-700">Maven</span>
+            <span class="font-mono text-xs px-2.5 py-1 rounded-full bg-surface-2 text-muted border border-line">Java Swing</span>
+            <span class="font-mono text-xs px-2.5 py-1 rounded-full bg-surface-2 text-muted border border-line">Google GenAI SDK</span>
+            <span class="font-mono text-xs px-2.5 py-1 rounded-full bg-surface-2 text-muted border border-line">Maven</span>
           </div>
         </article>
 
         <!-- PROJE 4: Hemophilia -->
-        <article data-category="python" class="project-card group flex flex-col rounded-2xl border p-5 transition-all duration-[400ms] ease-out border-slate-300 dark:border-slate-800 bg-white/70 dark:bg-white/[0.03] hover:-translate-y-2 hover:border-sky-500/40 hover:shadow-xl hover:shadow-sky-500/10" data-aos="fade-up" data-aos-delay="100">
+        <article data-category="python" class="project-card flex flex-col rounded-2xl border border-line bg-surface p-5 md:p-6 hover:border-line-strong transition-all duration-200">
           <div class="flex items-start justify-between gap-3">
-            <span class="font-mono text-[10px] tracking-wider px-2 py-1 rounded-md bg-sky-500/10 text-sky-600 dark:text-sky-400 border border-sky-500/20">[ HEALTH-TECH // LOGIC ENGINE ]</span>
-            <a href="https://github.com/osmanfurkanerkan/Hemophilia-Prophylaxis-Program" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="shrink-0 text-slate-400 hover:text-accent transition-colors"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.49 0-.24-.01-.87-.01-1.71-2.78.62-3.37-1.37-3.37-1.37-.45-1.18-1.11-1.49-1.11-1.49-.91-.64.07-.62.07-.62 1 .07 1.53 1.06 1.53 1.06.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.71 0 0 .84-.27 2.75 1.05a9.4 9.4 0 0 1 5 0c1.91-1.32 2.75-1.05 2.75-1.05.55 1.41.2 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.81-4.57 5.06.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .27.18.6.69.49A10.26 10.26 0 0 0 22 12.25C22 6.58 17.52 2 12 2Z"/></svg></a>
+            <span class="font-mono text-xs tracking-wider px-2.5 py-1 rounded-full bg-accent-soft text-accent-text">[ HEALTH-TECH // LOGIC ENGINE ]</span>
+            <a href="https://github.com/osmanfurkanerkan/Hemophilia-Prophylaxis-Program" target="_blank" rel="noopener noreferrer" aria-label="GitHub deposu" data-en-aria="GitHub repository" class="shrink-0 -m-2.5 h-11 w-11 grid place-items-center rounded-lg text-muted hover:text-ink transition-colors"><svg class="h-5 w-5" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.49 0-.24-.01-.87-.01-1.71-2.78.62-3.37-1.37-3.37-1.37-.45-1.18-1.11-1.49-1.11-1.49-.91-.64.07-.62.07-.62 1 .07 1.53 1.06 1.53 1.06.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.71 0 0 .84-.27 2.75 1.05a9.4 9.4 0 0 1 5 0c1.91-1.32 2.75-1.05 2.75-1.05.55 1.41.2 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.81-4.57 5.06.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .27.18.6.69.49A10.26 10.26 0 0 0 22 12.25C22 6.58 17.52 2 12 2Z"/></svg></a>
           </div>
-          <h3 class="font-display text-lg font-bold mt-3">Hemophilia Clinical Decision Support</h3>
-          <p class="mt-2 text-slate-600 dark:text-slate-400 text-sm leading-relaxed" data-en="A tool for hemophilia patients that analyzes factor-protein deficiency, optimizes standard vial counts and models a 4-week treatment cost.">Hemofili hastaları için faktör protein eksikliği analizi, standart flakon (vial) optimizasyonu ve 4 haftalık tedavi maliyeti modelleme aracı.</p>
+          <h3 class="font-display text-lg font-semibold mt-3">Hemophilia Clinical Decision Support</h3>
+          <p class="mt-2 text-muted text-sm leading-relaxed" data-en="A tool for hemophilia patients that analyzes factor-protein deficiency, optimizes standard vial counts and models a 4-week treatment cost.">Hemofili hastaları için faktör protein eksikliği analizi, standart flakon (vial) optimizasyonu ve 4 haftalık tedavi maliyeti modelleme aracı.</p>
           <div class="mt-4 flex flex-wrap gap-2">
-            <span class="font-mono text-xs px-2.5 py-1 rounded-md border border-slate-300 dark:border-slate-700">Pure Python</span>
-            <span class="font-mono text-xs px-2.5 py-1 rounded-md border border-slate-300 dark:border-slate-700">Algorithmic Logic</span>
+            <span class="font-mono text-xs px-2.5 py-1 rounded-full bg-surface-2 text-muted border border-line">Pure Python</span>
+            <span class="font-mono text-xs px-2.5 py-1 rounded-full bg-surface-2 text-muted border border-line">Algorithmic Logic</span>
           </div>
         </article>
 
         <!-- PROJE 5: TÜBİTAK Kornea (Private / Locked) -->
-        <article data-category="java-spring" class="project-card group flex flex-col rounded-2xl border p-5 transition-all duration-[400ms] ease-out border-slate-300 dark:border-slate-800 bg-white/70 dark:bg-white/[0.03] hover:-translate-y-2 hover:border-rose-500/40 hover:shadow-xl hover:shadow-rose-500/10 md:col-span-2" data-aos="fade-up" data-aos-delay="40">
+        <article data-category="java-spring" class="project-card flex flex-col rounded-2xl border border-line bg-surface p-5 md:p-6 hover:border-line-strong transition-all duration-200 md:col-span-2">
           <div class="flex items-start justify-between gap-3">
-            <span class="font-mono text-[10px] tracking-wider px-2 py-1 rounded-md bg-rose-500/10 text-rose-500 dark:text-rose-400 border border-rose-500/20">[ PRIVATE REPO // TÜBİTAK STAR ]</span>
-            <button type="button" disabled aria-label="Kodlar Ar-Ge Gizliliği Sebebiyle Kapalıdır" title="Kodlar Ar-Ge Gizliliği Sebebiyle Kapalıdır" class="shrink-0 text-slate-400 dark:text-slate-500 opacity-60 cursor-not-allowed">
-              <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            <span class="font-mono text-xs tracking-wider px-2.5 py-1 rounded-full bg-surface-2 text-secondary-text border border-line">[ PRIVATE REPO // TÜBİTAK STAR ]</span>
+            <button type="button" disabled aria-disabled="true" aria-label="Kodlar Ar-Ge gizliliği sebebiyle kapalıdır" data-en-aria="Source closed due to R&amp;D confidentiality" class="shrink-0 -m-2.5 h-11 w-11 grid place-items-center text-muted opacity-50 cursor-not-allowed">
+              <svg class="h-5 w-5" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
             </button>
           </div>
-          <h3 class="font-display text-lg font-bold mt-3">Kornea Donör-Alıcı Önceliklendirme Sistemi</h3>
-          <p class="mt-2 max-w-2xl text-slate-600 dark:text-slate-400 text-sm leading-relaxed" data-en="A rule-based algorithm developed within the TÜBİTAK 2247-C STAR project that finds the most suitable cornea–donor match based on clinical urgency and biological compatibility parameters.">TÜBİTAK 2247-C STAR projesi kapsamında, klinik aciliyet ve biyolojik uyumluluk parametrelerini baz alarak en uygun kornea-donör eşleşmesini yapan kural tabanlı algoritma.</p>
+          <h3 class="font-display text-lg font-semibold mt-3">Kornea Donör-Alıcı Önceliklendirme Sistemi</h3>
+          <p class="mt-2 max-w-2xl text-muted text-sm leading-relaxed" data-en="A rule-based algorithm developed within the TÜBİTAK 2247-C STAR project that finds the most suitable cornea–donor match based on clinical urgency and biological compatibility parameters.">TÜBİTAK 2247-C STAR projesi kapsamında, klinik aciliyet ve biyolojik uyumluluk parametrelerini baz alarak en uygun kornea-donör eşleşmesini yapan kural tabanlı algoritma.</p>
           <div class="mt-4 flex flex-wrap items-center gap-2">
-            <span class="font-mono text-xs px-2.5 py-1 rounded-md border border-slate-300 dark:border-slate-700">Java</span>
-            <span class="font-mono text-xs px-2.5 py-1 rounded-md border border-slate-300 dark:border-slate-700">SQLite</span>
-            <span class="font-mono text-xs px-2.5 py-1 rounded-md border border-slate-300 dark:border-slate-700">Rule-Based Algorithms</span>
-            <span class="ml-auto inline-flex items-center gap-1.5 font-mono text-[11px] text-rose-500/90 dark:text-rose-400/90">
-              <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            <span class="font-mono text-xs px-2.5 py-1 rounded-full bg-surface-2 text-muted border border-line">Java</span>
+            <span class="font-mono text-xs px-2.5 py-1 rounded-full bg-surface-2 text-muted border border-line">SQLite</span>
+            <span class="font-mono text-xs px-2.5 py-1 rounded-full bg-surface-2 text-muted border border-line">Rule-Based Algorithms</span>
+            <span class="ml-auto inline-flex items-center gap-1.5 font-mono text-xs text-secondary-text">
+              <svg class="h-3.5 w-3.5" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
               <span data-en="Source closed due to R&amp;D confidentiality">Kodlar Ar-Ge gizliliği sebebiyle kapalıdır</span>
             </span>
           </div>
@@ -1221,12 +1222,12 @@
       </div>
 
       <!-- Alt yönlendirme (Footer CTA) -->
-      <div class="mt-10 pt-6 border-t border-slate-200/70 dark:border-white/10 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4" data-aos="fade-up">
-        <p class="font-mono text-sm text-slate-500 dark:text-slate-400" data-en="// To browse all my other experiments, past dumps and lab work:">// Diğer tüm denemeleri, geçmiş dökümleri ve lab çalışmalarını görmek için:</p>
-        <a href="https://github.com/osmanfurkanerkan?tab=repositories" target="_blank" rel="noopener noreferrer" class="group inline-flex items-center gap-2 rounded-full border px-5 py-2.5 font-mono text-xs whitespace-nowrap border-slate-300 dark:border-slate-700 hover:border-sky-400/60 hover:text-sky-400 transition-all">
-          <svg class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.49 0-.24-.01-.87-.01-1.71-2.78.62-3.37-1.37-3.37-1.37-.45-1.18-1.11-1.49-1.11-1.49-.91-.64.07-.62.07-.62 1 .07 1.53 1.06 1.53 1.06.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.71 0 0 .84-.27 2.75 1.05a9.4 9.4 0 0 1 5 0c1.91-1.32 2.75-1.05 2.75-1.05.55 1.41.2 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.81-4.57 5.06.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .27.18.6.69.49A10.26 10.26 0 0 0 22 12.25C22 6.58 17.52 2 12 2Z"/></svg>
+      <div class="mt-10 pt-6 border-t border-line flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+        <p class="font-mono text-sm text-muted" data-en="// To browse all my other experiments, past dumps and lab work:">// Diğer tüm denemeleri, geçmiş dökümleri ve lab çalışmalarını görmek için:</p>
+        <a href="https://github.com/osmanfurkanerkan?tab=repositories" target="_blank" rel="noopener noreferrer" class="group inline-flex items-center gap-2 rounded-full border px-5 py-2.5 font-mono text-xs whitespace-nowrap border-line hover:border-line-strong hover:bg-accent-soft transition-colors">
+          <svg class="h-4 w-4" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.49 0-.24-.01-.87-.01-1.71-2.78.62-3.37-1.37-3.37-1.37-.45-1.18-1.11-1.49-1.11-1.49-.91-.64.07-.62.07-.62 1 .07 1.53 1.06 1.53 1.06.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.71 0 0 .84-.27 2.75 1.05a9.4 9.4 0 0 1 5 0c1.91-1.32 2.75-1.05 2.75-1.05.55 1.41.2 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.81-4.57 5.06.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .27.18.6.69.49A10.26 10.26 0 0 0 22 12.25C22 6.58 17.52 2 12 2Z"/></svg>
           <span data-en="All My GitHub Repos">GitHub Repolarımın Tamamı</span>
-          <span class="text-emerald-400 font-bold font-sans">↗</span>
+          <span aria-hidden="true">↗</span>
         </a>
       </div>
     </section>
@@ -1717,22 +1718,17 @@
       var cards = document.querySelectorAll('.project-card');
       if (!buttons.length || !cards.length) return;
 
-      var ACTIVE = ['bg-sky-500/15', 'border-sky-400/60', 'text-sky-600', 'dark:text-sky-300', 'shadow-[0_0_18px_-4px_rgba(56,189,248,0.6)]'];
-      var IDLE = ['bg-white/60', 'dark:bg-white/[0.03]', 'border-slate-300', 'dark:border-slate-700', 'text-slate-600', 'dark:text-slate-400'];
-
+      var live = document.getElementById('projCount');
       function setActive(btn) {
-        buttons.forEach(function (b) {
-          ACTIVE.forEach(function (c) { b.classList.remove(c); });
-          IDLE.forEach(function (c) { b.classList.add(c); });
-        });
-        IDLE.forEach(function (c) { btn.classList.remove(c); });
-        ACTIVE.forEach(function (c) { btn.classList.add(c); });
+        buttons.forEach(function (b) { b.setAttribute('aria-pressed', b === btn ? 'true' : 'false'); });
       }
 
       function applyFilter(cat) {
+        var shown = 0;
         cards.forEach(function (card) {
           var cats = (card.getAttribute('data-category') || '').split(/\s+/);
           var match = (cat === 'all' || cats.indexOf(cat) !== -1);
+          if (match) shown++;
           if (match) {
             card.style.display = '';
             // bir sonraki frame'de pürüzsüzce büyüt
@@ -1748,9 +1744,10 @@
                 card.classList.add('invisible');
                 card.style.display = 'none';
               }
-            }, 400);
+            }, REDUCED ? 0 : 220);
           }
         });
+        if (live) live.textContent = t('projCount', { n: shown });
       }
 
       buttons.forEach(function (b) {
