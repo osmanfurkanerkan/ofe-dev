@@ -41,3 +41,47 @@
     --c-danger: 249 112 102;         /* #F97066 */
   }
 }
+
+/* Genel kurallar — eskiden index.html <head> içindeki <style> bloğundaydı (DESIGN_SYSTEM.md §5.11, §8, §9) */
+@layer base {
+  html {
+    background-color: rgb(var(--c-bg));
+    scroll-padding-top: 90px;
+    scrollbar-width: thin;
+    scrollbar-color: rgb(var(--c-accent) / .5) transparent;
+  }
+  body { font-family: 'Outfit', sans-serif; }
+  ::selection { background: #588B8B; color: #FFFFFF; }
+
+  /* İnce, düz scrollbar (Chrome / Safari) */
+  ::-webkit-scrollbar { width: 8px; height: 8px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+  ::-webkit-scrollbar-thumb { background: rgb(var(--c-accent) / .5); border-radius: 9999px; }
+  ::-webkit-scrollbar-thumb:hover { background: rgb(var(--c-accent) / .75); }
+
+  /* Klavye focus halkası: sadece klavyeyle gezinirken görünür */
+  :focus-visible {
+    outline: 2px solid rgb(var(--c-focus));
+    outline-offset: 2px;
+  }
+}
+
+@layer components {
+  .fade-swap { transition: opacity .25s cubic-bezier(.2,.8,.2,1); }
+  [data-aos] { pointer-events: auto; }
+
+  /* Typewriter imleci */
+  .tw-cursor { animation: tw-blink 1s steps(2, start) infinite; }
+  @keyframes tw-blink { to { visibility: hidden; } }
+}
+
+/* Hareketi azalt (reduced motion) tercihi — DESIGN_SYSTEM.md §6 */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto !important; }
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+  }
+  .tw-cursor { display: none; }
+}

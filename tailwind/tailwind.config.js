@@ -25,6 +25,15 @@ module.exports = {
         // iki "dark:bg-base" kullanımı "dark:bg-bg" olarak değiştirildi.
         paper: v('bg'), steel: v('accent'), steeldeep: v('accent-fill'),
       },
+      keyframes: {
+        fadeIn: {
+          from: { opacity: '0', transform: 'scale(.98)' },
+          to: { opacity: '1', transform: 'scale(1)' },
+        },
+      },
+      animation: {
+        'fade-in': 'fadeIn 200ms cubic-bezier(.2,.8,.2,1)',
+      },
       fontFamily: {
         display: ['Outfit', 'sans-serif'],
         mono: ['"JetBrains Mono"', 'monospace'],
